@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://xdyu47f6bedw"]
+
+[ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
+[ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="3_lntuk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
+
+[sub_resource type="Sky" id="Sky_je8ax"]
+sky_material = SubResource("ProceduralSkyMaterial_xiae6")
+
+[sub_resource type="Environment" id="Environment_4xc2f"]
+background_mode = 2
+sky = SubResource("Sky_je8ax")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qwty5"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Env" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Env"]
+environment = SubResource("Environment_4xc2f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
+transform = Transform3D(1, 0, 0, 0, -0.135335, 0.9908, 0, -0.9908, -0.135335, -0.958255, 5.36524, -0.397825)
+
+[node name="DebugCommands" type="Node" parent="."]
+script = ExtResource("1_ql8j7")
+
+[node name="OrbitCameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59857, 0)
+script = ExtResource("1_20s52")
+camera_path = NodePath("Camera3D")
+target_path = NodePath("../Player")
+pitch_angle_max = 90.0
+x_sensitivity = 0.5
+y_sensitivity = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="OrbitCameraController"]
+current = true
+fov = 90.0
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59857, 0)
+script = ExtResource("3_lntuk")
+camera = NodePath("../OrbitCameraController/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_qwty5")
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00208, 0)
+use_collision = true
+size = Vector3(14.8203, 1.97534, 17)

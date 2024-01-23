@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var speed: float = 10
 var input_direction: Vector2
 
-var relative_input_direction:
+var relative_input_direction: Vector3:
 	get:
 		if camera == null:
 			return Vector3(input_direction.x, input_direction.y, 0)
@@ -37,9 +37,14 @@ func _process(delta):
 		
 func _physics_process(delta):
 	
+	var move_vel = relative_input_direction * speed
+	velocity.x = move_vel.x
+	velocity.z = move_vel.z
+
 	# Gravity
 	if not is_on_floor():
 		velocity.y += -9.8 * delta
+	else:
+		velocity.y = 0
 		
-	velocity = relative_input_direction * speed
 	move_and_slide()

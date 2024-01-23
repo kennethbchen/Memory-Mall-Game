@@ -20,6 +20,9 @@ sky = SubResource("Sky_je8ax")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uusni"]
 render_priority = 0
 shader = ExtResource("4_1qfxn")
+shader_parameter/edge_threshold = 0.1
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/background_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_aqsk8"]
 material = SubResource("ShaderMaterial_uusni")

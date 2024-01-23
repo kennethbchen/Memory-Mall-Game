@@ -33,11 +33,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.59857, 0)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
+position_offset = Vector3(0, 0.65, 0)
 pitch_angle_max = 90.0
 x_sensitivity = 0.5
 y_sensitivity = 0.5
 
 [node name="Camera3D" type="Camera3D" parent="OrbitCameraController"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
 current = true
 fov = 90.0
 
@@ -50,6 +52,6 @@ camera = NodePath("../OrbitCameraController/Camera3D")
 shape = SubResource("CapsuleShape3D_qwty5")
 
 [node name="Ground" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00208, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.256536, 0)
 use_collision = true
-size = Vector3(14.8203, 1.97534, 17)
+size = Vector3(41.6331, 0.484252, 67.2998)

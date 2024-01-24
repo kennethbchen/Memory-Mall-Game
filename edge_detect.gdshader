@@ -5,9 +5,14 @@ render_mode unshaded;
 // https://godotshaders.com/shader/depth-based-edge-detection-with-sobel-operator-screenspace/
 // https://godotshaders.com/shader/normal-based-edge-detection-with-sobel-operator-screenspace/
 
+// Then, applies turbulent displace effect to the edges from:
+// https://www.shadertoy.com/view/MscSzf
+
 uniform sampler2D SCREEN_TEXTURE: hint_screen_texture, filter_linear_mipmap;
 uniform sampler2D NORMAL_TEXTURE : hint_normal_roughness_texture, filter_linear_mipmap;
 uniform sampler2D DEPTH_TEXTURE: hint_depth_texture, filter_linear_mipmap;
+
+group_uniforms edge_detection;
 
 uniform float normal_threshold = 0.5;
 uniform float depth_threshold = 3;
@@ -27,6 +32,13 @@ const mat3 sobel_x = mat3(
 	vec3(-1.0, -2.0, -1.0)
 );
 
+group_uniforms turbulent_displace;
+
+uniform sampler2D NOISE_PATTERN;
+
+uniform float noise_amount = 0.01;
+uniform float error_range = 0.001;
+uniform float error_period = 0.1;
 
 float linearize_depth(vec2 uv_coord, mat4 proj_matrix){
 	float depth = texture(DEPTH_TEXTURE, uv_coord).x;
@@ -53,6 +65,10 @@ void vertex(){
 
 void fragment() {
 	vec2 uv = SCREEN_UV;
+	
+	float noise = texture(NOISE_PATTERN, uv).r * noise_amount;
+	
+	uv = uv + vec2(error_range * sin(error_period * uv.y) + noise, error_range * sin(error_period * uv.x) + noise);
 	
 	vec3 normal = texture(NORMAL_TEXTURE, uv).rgb;
 	normal = normal * 2.0 - 1.0;

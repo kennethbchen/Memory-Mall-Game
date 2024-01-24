@@ -90,7 +90,7 @@ use_collision = true
 size = Vector3(2.02344, 5.25684, 6.4314)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.03546, -3.81947)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407125, -3.81947)
 radius = 1.452
 radial_segments = 9
 rings = 10

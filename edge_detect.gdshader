@@ -18,7 +18,6 @@ uniform float normal_threshold = 0.5;
 uniform float depth_threshold = 3;
 
 uniform vec3 line_color: source_color = vec3(0.0);
-uniform vec3 background_color: source_color = vec3(1.0);
 
 const mat3 sobel_y = mat3(
 	vec3(1.0, 0.0, -1.0),

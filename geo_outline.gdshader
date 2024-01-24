@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded;
+render_mode unshaded, cull_front;
 
 uniform sampler2D SCREEN_TEXTURE: hint_screen_texture, filter_linear_mipmap;
 
@@ -11,10 +11,6 @@ void vertex() {
 }
 
 void fragment() {
-	// Called for every pixel the material is visible on.
+	ALBEDO = outline_color;
 }
 
-//void light() {
-	// Called for every pixel for every light affecting the material.
-	// Uncomment to replace the default light processing function with this one.
-//}

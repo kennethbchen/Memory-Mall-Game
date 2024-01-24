@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=9 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_lntuk"]
-[ext_resource type="Material" uid="uid://dyp3iys4dtylf" path="res://geo_outline_material.tres" id="4_8ela3"]
+[ext_resource type="PackedScene" uid="uid://bllxhb6p4l8cc" path="res://blender/level.blend" id="5_y5eys"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 
@@ -16,13 +16,6 @@ background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_je8ax")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qwty5"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fv2lo"]
-next_pass = ExtResource("4_8ela3")
-albedo_color = Color(0.439216, 0.807843, 0.898039, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_j8yct"]
-material = ExtResource("4_8ela3")
 
 [node name="Game" type="Node3D"]
 
@@ -71,17 +64,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4317, 16.0806, 0)
 use_collision = true
 size = Vector3(41.6331, 0.484252, 67.2998)
 
-[node name="Ground2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.39747, 11.9903)
-use_collision = true
-size = Vector3(8.37695, 13.105, 17.5371)
-material = SubResource("StandardMaterial3D_fv2lo")
-
-[node name="Ground4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.76644, 5.39747, 11.9903)
-use_collision = true
-size = Vector3(2.02344, 5.25684, 6.4314)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.85774, 0)
-mesh = SubResource("BoxMesh_j8yct")
+[node name="level" parent="." instance=ExtResource("5_y5eys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0282297, 1.04055, -5.72373)

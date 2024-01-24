@@ -36,7 +36,7 @@ group_uniforms turbulent_displace;
 
 uniform sampler2D NOISE_PATTERN;
 
-uniform float noise_amount = 0.01;
+uniform float noise_amount = 0.005;
 uniform float error_range = 0.001;
 uniform float error_period = 0.1;
 
@@ -66,9 +66,10 @@ void vertex(){
 void fragment() {
 	vec2 uv = SCREEN_UV;
 	
+	// Turbulent Displace
 	float noise = texture(NOISE_PATTERN, uv).r * noise_amount;
-	
 	uv = uv + vec2(error_range * sin(error_period * uv.y) + noise, error_range * sin(error_period * uv.x) + noise);
+	
 	
 	vec3 normal = texture(NORMAL_TEXTURE, uv).rgb;
 	normal = normal * 2.0 - 1.0;
@@ -101,11 +102,9 @@ void fragment() {
 		vec3(length(w.rgb-normal), length(normal.rgb-normal), length(e.rgb-normal)),
 		vec3(length(sw.rgb-normal), length(s.rgb-normal), length(se.rgb-normal))
 	);
-
-	float edge_confidence = sobel(surrounding_normals);
 	
 	if (sobel(surrounding_normals) > normal_threshold || sobel(surrounding_depths) > depth_threshold) {
-		ALBEDO = line_color;
+		ALBEDO = line_color; 
 	} else {
 		ALBEDO = screen_color.rgb;
 	}

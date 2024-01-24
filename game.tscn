@@ -52,6 +52,7 @@ shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Env"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10403, 2.67758, -1.03842)
+visible = false
 extra_cull_margin = 16384.0
 mesh = SubResource("BoxMesh_1mdd8")
 
@@ -88,13 +89,13 @@ use_collision = true
 size = Vector3(41.6331, 0.484252, 67.2998)
 
 [node name="Ground3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4317, 16.0806, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9081, 16.0806, 0)
 use_collision = true
 size = Vector3(41.6331, 0.484252, 67.2998)
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0282297, 1.04055, -5.72373)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14063, 2.95143, -5.72373)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97911, 3.73633)
+transform = Transform3D(0.057355, 0.998354, 0, -0.998354, 0.057355, 0, 0, 0, 1, 0, 1.97911, 3.73633)
 size = Vector3(3.49609, 9.21777, 8.47266)

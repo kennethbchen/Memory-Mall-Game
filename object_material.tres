@@ -4,3 +4,5 @@
 
 [resource]
 next_pass = ExtResource("1_kdra4")
+albedo_color = Color(0.709804, 0.709804, 0.709804, 1)
+rim = 0.18

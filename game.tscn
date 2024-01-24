@@ -94,7 +94,7 @@ use_collision = true
 size = Vector3(41.6331, 0.484252, 67.2998)
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14063, 2.95143, -5.72373)
+transform = Transform3D(0.953675, 0, -0.300839, 0, 1, 0, 0.300839, 0, 0.953675, 2.14063, 2.95143, -5.72373)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(0.057355, 0.998354, 0, -0.998354, 0.057355, 0, 0, 0, 1, 0, 1.97911, 3.73633)

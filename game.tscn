@@ -1,14 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=10 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_lntuk"]
-[ext_resource type="Material" uid="uid://c570223gepdw3" path="res://edge_detect_material.tres" id="4_8b2bj"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_11nbj"]
-material = ExtResource("4_8b2bj")
-flip_faces = true
-size = Vector3(2, 2, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 
@@ -31,12 +25,6 @@ albedo_color = Color(0.898039, 0.572549, 0.67451, 1)
 [node name="Game" type="Node3D"]
 
 [node name="Env" type="Node" parent="."]
-
-[node name="EdgeDetectorEffect" type="MeshInstance3D" parent="Env"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.41825, 0)
-extra_cull_margin = 16384.0
-mesh = SubResource("BoxMesh_11nbj")
-skeleton = NodePath("../..")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Env"]
 environment = SubResource("Environment_4xc2f")

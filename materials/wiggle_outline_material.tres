@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bnjsxeqdd3g8n"]
+
+[ext_resource type="Shader" path="res://shaders/wiggle_outline.gdshader" id="1_adwvd"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_dyke7"]
+fractal_octaves = 3
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_igv0r"]
+width = 1024
+height = 1024
+in_3d_space = true
+seamless = true
+seamless_blend_skirt = 1.0
+normalize = false
+noise = SubResource("FastNoiseLite_dyke7")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_adwvd")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/noise_amount = 1.0
+shader_parameter/error_range = 0.5
+shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_igv0r")

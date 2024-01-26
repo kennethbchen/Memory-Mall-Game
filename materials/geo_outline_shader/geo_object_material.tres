@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dryp3ctlu35a3"]
 
-[ext_resource type="Material" uid="uid://dyp3iys4dtylf" path="res://geo_outline_material.tres" id="1_kdra4"]
+[ext_resource type="Material" uid="uid://dyp3iys4dtylf" path="res://materials/geo_outline_shader/geo_outline_material.tres" id="1_kdra4"]
 
 [resource]
 next_pass = ExtResource("1_kdra4")

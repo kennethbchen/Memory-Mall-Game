@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var camera: Camera3D
 
-@export var speed: float = 10
+@export var speed: float = 5
 var input_direction: Vector2
 
 var relative_input_direction: Vector3:

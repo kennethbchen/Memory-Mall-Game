@@ -19,5 +19,5 @@ render_priority = 0
 shader = ExtResource("1_pxkq5")
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/noise_sensitivity = 0.05
-shader_parameter/noise_range = 0.75
+shader_parameter/noise_range = 0.5
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_igv0r")

@@ -57,8 +57,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_qwty5")
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44277, -2.32376)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.26394, 0)
 use_collision = true
 size = Vector3(23.7148, 1, 23.6611)

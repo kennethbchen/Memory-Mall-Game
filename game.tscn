@@ -38,7 +38,7 @@ omni_attenuation = 0.00176025
 script = ExtResource("1_ql8j7")
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.42235, 6.24849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42235, 6.24849)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -51,7 +51,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.77235, 6.24849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77235, 6.24849)
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
 speed = 3.0

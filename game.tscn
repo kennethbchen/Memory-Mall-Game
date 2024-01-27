@@ -15,8 +15,8 @@ background_mode = 1
 background_color = Color(1, 1, 1, 1)
 sky = SubResource("Sky_je8ax")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qwty5"]
-radius = 1.0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vhq4w"]
+height = 1.6
 
 [node name="Game" type="Node3D"]
 
@@ -26,14 +26,19 @@ radius = 1.0
 environment = SubResource("Environment_4xc2f")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
-transform = Transform3D(1, 0, 0, 0, -0.135335, 0.9908, 0, -0.9908, -0.135335, -0.958255, 5.36524, -0.397825)
+transform = Transform3D(0.982476, 0.0252247, -0.184672, 0.186387, -0.132963, 0.973438, 3.23593e-09, -0.9908, -0.135335, -0.958255, 5.36524, -0.397825)
 shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Env"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6976, 1.829, -12.771)
+omni_range = 4096.0
+omni_attenuation = 0.00176025
 
 [node name="DebugCommands" type="Node" parent="."]
 script = ExtResource("1_ql8j7")
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.77235, 6.24849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.42235, 6.24849)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -43,18 +48,18 @@ x_sensitivity = 0.5
 y_sensitivity = 0.5
 
 [node name="Camera3D" type="Camera3D" parent="OrbitCameraController"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
 current = true
-fov = 90.0
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.77235, 6.24849)
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
+speed = 3.0
+run_speed = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_qwty5")
+shape = SubResource("CylinderShape3D_vhq4w")
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
 

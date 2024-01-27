@@ -58,7 +58,5 @@ func _process(delta):
 		assert(target_path, "Camera Target Not Found")
 		target = get_node(target_path)
 	
-	position = target.position
-	
-	camera.position = position_offset
-	camera.rotation = rotation_offset
+	position = target.position + position_offset
+

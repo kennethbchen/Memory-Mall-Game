@@ -107,5 +107,5 @@ size = Vector3(23.7148, 1, 23.6611)
 [node name="InfoArea" parent="." instance=ExtResource("5_dp3gq")]
 
 [node name="InfoArea2" parent="." instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54444, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54444, 0, 0)
 text = "Other Placeholder Text"

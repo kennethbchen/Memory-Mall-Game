@@ -8,6 +8,7 @@ var original_position: Vector2 = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	visible = false
 	EventBus.player_entered_text_info.connect(on_display_text)
 	EventBus.player_exited_text_info.connect(on_hide_text)
 	original_position = position

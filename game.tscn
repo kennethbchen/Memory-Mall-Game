@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=11 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
+[ext_resource type="Script" path="res://info_textbox.gd" id="1_x0vqm"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_lntuk"]
 [ext_resource type="PackedScene" uid="uid://orog4etuspw7" path="res://info_area.tscn" id="5_dp3gq"]
 [ext_resource type="PackedScene" uid="uid://bllxhb6p4l8cc" path="res://blender/level.blend" id="5_y5eys"]
@@ -20,6 +21,40 @@ sky = SubResource("Sky_je8ax")
 height = 1.6
 
 [node name="Game" type="Node3D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InfoTextbox" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 192.0
+offset_top = -135.0
+offset_right = -192.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+script = ExtResource("1_x0vqm")
+
+[node name="Panel" type="Panel" parent="UI/InfoTextbox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/InfoTextbox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Textbox Placeholder"
 
 [node name="Env" type="Node" parent="."]
 

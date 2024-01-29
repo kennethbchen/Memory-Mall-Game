@@ -21,22 +21,32 @@ func on_display_text(text: String):
 func on_hide_text():
 	make_hidden()
 
+func _get_visible_position():
+	return original_position * get_viewport_rect().size
+	
+func _get_hide_position():
+	return original_position * get_viewport_rect().size + Vector2(0, get_viewport_rect().size.y * 0.4)
+
 func make_visible():
+	
+	# For consistency of tween
+	position = _get_hide_position()
 	visible = true
+	
 	var t = get_tree().create_tween()
 	t.set_ease(Tween.EASE_OUT)
 	t.set_trans(Tween.TRANS_CUBIC)
-	t.tween_property(self, "position", original_position * get_viewport_rect().size, animation_time)
+	t.tween_property(self, "position", _get_visible_position(), animation_time)
 	
 func make_hidden():
 	
-	get_rect()
-	var hide_position = original_position * get_viewport_rect().size + Vector2(0, get_viewport_rect().size.y * 0.4)
-	print(hide_position)
+	# For consistency of tween
+	position = _get_visible_position()
+	
 	var t = get_tree().create_tween()
 	t.set_ease(Tween.EASE_IN)
 	t.set_trans(Tween.TRANS_CUBIC)
-	t.tween_property(self, "position", hide_position, animation_time)
+	t.tween_property(self, "position", _get_hide_position(), animation_time)
 	t.finished.connect(func():
 		textbox.text = ""
 		visible = false

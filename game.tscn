@@ -38,7 +38,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_x0vqm")
-animation_time = 0.5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel"]
 layout_mode = 1
@@ -47,6 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 text = "Textbox Placeholder"
 
 [node name="Env" type="Node" parent="."]

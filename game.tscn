@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=10 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_lntuk"]
+[ext_resource type="PackedScene" uid="uid://orog4etuspw7" path="res://info_area.tscn" id="5_dp3gq"]
 [ext_resource type="PackedScene" uid="uid://bllxhb6p4l8cc" path="res://blender/level.blend" id="5_y5eys"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
@@ -67,3 +68,5 @@ shape = SubResource("CylinderShape3D_vhq4w")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.26394, 0)
 use_collision = true
 size = Vector3(23.7148, 1, 23.6611)
+
+[node name="InfoArea" parent="." instance=ExtResource("5_dp3gq")]

@@ -1,7 +1,6 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://ddowawmcjkhc0"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://ddowawmcjkhc0"]
 
 [ext_resource type="Shader" path="res://shaders/wiggly_2d.gdshader" id="1_728jj"]
-[ext_resource type="Texture2D" uid="uid://dicyn1dycs8pr" path="res://icon.png" id="2_15pac"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_o6lgo"]
 
@@ -10,8 +9,11 @@ noise = SubResource("FastNoiseLite_o6lgo")
 
 [resource]
 shader = ExtResource("1_728jj")
-shader_parameter/wiggle_speed = 0.5
-shader_parameter/wiggle_period = 11.435
-shader_parameter/wiggle_range = 0.075
-shader_parameter/BOX_TEXTURE = ExtResource("2_15pac")
+shader_parameter/inner_color = Color(0.152941, 0.152941, 0.152941, 1)
+shader_parameter/width = 0.917
+shader_parameter/height = 0.761
+shader_parameter/corner_radius = 0.127
+shader_parameter/wiggle_speed = 2.0
+shader_parameter/wiggle_period = 20.0
+shader_parameter/wiggle_range = 0.007
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_femgd")

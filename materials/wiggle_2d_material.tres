@@ -3,17 +3,22 @@
 [ext_resource type="Shader" path="res://shaders/wiggly_2d.gdshader" id="1_728jj"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_o6lgo"]
+fractal_octaves = 6
+fractal_weighted_strength = 0.4
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_femgd"]
+seamless = true
 noise = SubResource("FastNoiseLite_o6lgo")
 
 [resource]
 shader = ExtResource("1_728jj")
-shader_parameter/inner_color = Color(0.152941, 0.152941, 0.152941, 1)
-shader_parameter/width = 0.917
-shader_parameter/height = 0.761
-shader_parameter/corner_radius = 0.127
-shader_parameter/wiggle_speed = 2.0
-shader_parameter/wiggle_period = 20.0
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/inner_color = Color(0.870588, 0.870588, 0.870588, 1)
+shader_parameter/width = 0.206
+shader_parameter/height = 0.808
+shader_parameter/corner_radius = 0.09
+shader_parameter/wiggle_speed = 1.0
+shader_parameter/wiggle_period = 23.74
 shader_parameter/wiggle_range = 0.007
+shader_parameter/noise_strength = 4.13
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_femgd")

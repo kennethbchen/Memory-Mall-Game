@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var text: String = "Placeholder Text"
+@export_multiline var text: String = "Placeholder Text"
 
 var visited: bool = false
 

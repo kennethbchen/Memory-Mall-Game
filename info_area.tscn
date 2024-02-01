@@ -4,11 +4,11 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_erv7l"]
 height = 1.0
-radius = 2.0
+radius = 1.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_e6a33"]
-top_radius = 2.0
-bottom_radius = 2.0
+top_radius = 1.0
+bottom_radius = 1.0
 height = 0.25
 radial_segments = 8
 cap_bottom = false

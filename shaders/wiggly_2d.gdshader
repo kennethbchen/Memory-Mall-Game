@@ -28,7 +28,6 @@ float sdRoundBox( in vec2 p, in vec2 b, in vec4 r )
 
 void fragment() {
 	
-	vec2 node_size = 1.0 / TEXTURE_PIXEL_SIZE;
 	vec2 uv = (UV - vec2(0.5)) * 2.0;
 	
 	// Distort the uv coordinate for a wavy effect

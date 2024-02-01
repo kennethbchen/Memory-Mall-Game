@@ -12,13 +12,8 @@ noise = SubResource("FastNoiseLite_o6lgo")
 
 [resource]
 shader = ExtResource("1_728jj")
-shader_parameter/outline_color = Color(0, 0, 0, 1)
-shader_parameter/inner_color = Color(0.870588, 0.870588, 0.870588, 1)
-shader_parameter/width = 1.0
-shader_parameter/height = 0.685
-shader_parameter/corner_radius = 0.09
 shader_parameter/wiggle_speed = 1.0
-shader_parameter/wiggle_period = 23.74
-shader_parameter/wiggle_range = 0.007
-shader_parameter/noise_strength = 4.13
+shader_parameter/wiggle_period = 2.03
+shader_parameter/wiggle_range = 0.012
+shader_parameter/noise_strength = 7.155
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_femgd")

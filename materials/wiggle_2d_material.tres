@@ -12,8 +12,8 @@ noise = SubResource("FastNoiseLite_o6lgo")
 
 [resource]
 shader = ExtResource("1_728jj")
-shader_parameter/wiggle_speed = 1.0
-shader_parameter/wiggle_period = 2.03
-shader_parameter/wiggle_range = 0.012
+shader_parameter/wiggle_speed = 2.935
+shader_parameter/wiggle_period = Vector2(11, 24.98)
+shader_parameter/wiggle_range = Vector2(0.007, 0.009)
 shader_parameter/noise_strength = 7.155
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_femgd")

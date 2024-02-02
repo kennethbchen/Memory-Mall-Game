@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://w30ld6taacnq"]
+
+[ext_resource type="Shader" path="res://shaders/cylinder_halo.gdshader" id="1_ilhtn"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ilhtn")
+shader_parameter/w1_range = 0.09
+shader_parameter/w2_range = 0.085
+shader_parameter/wavy_color = Color(0, 0.8, 1, 1)
+shader_parameter/w1_spikes = 10
+shader_parameter/w2_spikes = 5
+shader_parameter/w1_speed = 4.0
+shader_parameter/offset = -0.09

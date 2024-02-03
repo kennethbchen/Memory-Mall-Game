@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://orog4etuspw7"]
+[gd_scene load_steps=5 format=3 uid="uid://orog4etuspw7"]
 
 [ext_resource type="Script" path="res://scripts/info_area.gd" id="1_sb1nm"]
 [ext_resource type="Material" uid="uid://w30ld6taacnq" path="res://materials/info_halo_material.tres" id="2_sxagr"]
@@ -12,14 +12,11 @@ lightmap_size_hint = Vector2i(33, 24)
 material = ExtResource("2_sxagr")
 top_radius = 1.0
 bottom_radius = 1.0
-height = 1.0
+height = 1.5
 radial_segments = 16
 rings = 1
 cap_top = false
 cap_bottom = false
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_8w1ui"]
-material = ExtResource("2_sxagr")
 
 [node name="InfoArea" type="Area3D" groups=["info_area"]]
 script = ExtResource("1_sb1nm")
@@ -30,11 +27,6 @@ visible = false
 shape = SubResource("CylinderShape3D_erv7l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.498669, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.670127, 0)
 cast_shadow = 0
 mesh = SubResource("CylinderMesh_8i827")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.214458, 3.09962)
-cast_shadow = 0
-mesh = SubResource("PlaneMesh_8w1ui")

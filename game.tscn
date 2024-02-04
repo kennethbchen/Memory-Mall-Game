@@ -73,7 +73,7 @@ text = "Textbox Placeholder"
 environment = SubResource("Environment_4xc2f")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
-transform = Transform3D(0.982476, 0.0252247, -0.184672, 0.186387, -0.132963, 0.973438, 3.23593e-09, -0.9908, -0.135335, -0.958255, 5.36524, -0.397825)
+transform = Transform3D(0.982482, 0.027887, -0.184262, 0.141901, -0.752886, 0.642671, -0.120806, -0.65756, -0.743654, -0.958255, 5.36524, -0.397825)
 shadow_enabled = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Env"]

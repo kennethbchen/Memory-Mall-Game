@@ -106,6 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_vhq4w")
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012392, 0.00151658, 0.00974226)
 
 [node name="InfoAreas" type="Node" parent="."]
 

@@ -31,6 +31,10 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"AssetMaterial": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/asset_material.tres"
+},
 "DefaultMaterial": {
 "use_external/enabled": true,
 "use_external/path": "res://materials/object_material.tres"

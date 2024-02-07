@@ -43,17 +43,6 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://materials/wiggle_outline_material.tres"
 }
-},
-"nodes": {
-"PATH:Chair": {
-"import/skip_import": true
-},
-"PATH:Map Display": {
-"import/skip_import": true
-},
-"PATH:Table": {
-"import/skip_import": true
-}
 }
 }
 gltf/naming_version=1

@@ -15,6 +15,8 @@ sky_horizon_color = Color(0.678431, 0.772549, 0.933333, 1)
 sky_curve = 0.01875
 ground_bottom_color = Color(0.521569, 0.4, 0.611765, 1)
 ground_horizon_color = Color(0.678431, 0.772549, 0.933333, 1)
+sun_angle_max = 8.82
+sun_curve = 2.66297
 
 [sub_resource type="Sky" id="Sky_je8ax"]
 sky_material = SubResource("ProceduralSkyMaterial_xiae6")
@@ -25,6 +27,7 @@ sky = SubResource("Sky_je8ax")
 ambient_light_source = 3
 ambient_light_energy = 0.0
 reflected_light_source = 2
+tonemap_exposure = 1.48
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41jpt"]
 height = 1.6
@@ -82,7 +85,6 @@ environment = SubResource("Environment_4xc2f")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
 transform = Transform3D(0.988867, 0.0161765, -0.147923, 0.148344, -0.185369, 0.971407, -0.0117065, -0.982536, -0.185705, -0.958255, 5.36524, -0.397825)
 light_color = Color(0.972549, 1, 0.317647, 1)
-light_energy = 0.75
 shadow_enabled = true
 shadow_opacity = 0.95
 directional_shadow_mode = 1

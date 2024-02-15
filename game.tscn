@@ -107,7 +107,6 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55132, -20.9097)
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
-speed = 3.0
 run_speed = 20.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]

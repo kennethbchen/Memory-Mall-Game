@@ -122,15 +122,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012392, 0.00151658, 0.0097
 text = "This is the food court. This area is probably where I remember the most details of."
 
 [node name="FoodCourt2" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.52286, -1.90735e-06, -19.0484)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9476, -1.90735e-06, -15.1959)
 text = "I have very fond memories of this Piccadilly. As a child, my family would always go here and I loved eating the fried shrimp that they had. I don't remember for sure, but I think this closed down."
 
 [node name="SouthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -30.258)
-text = "I don't remember a lot about the hallways that connect the main areas together. There's an Abercrombie & Fitch that I got clothes from one time."
+text = "I don't remember a lot about the hallways that connect the main areas together. There's an Abercrombie & Fitch that I got clothes from one time. I also remember there being a Lids store which sold headwear."
 
 [node name="Hub1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -79.2094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -119.768)
 text = "This is what I see as the central hub area of the mall. It always had this trampoline ride thing where you would put on a harness which would allow you to jump very high and do flips. "
 
 [node name="Hub2" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
@@ -138,5 +138,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7776, -1.90735e-06, -79.2
 text = "I loved going to this GameStop as a kid. My family wouldn't really go out of the way to go to a GameStop, but we sometimes stopped by this one when we visited the mall. I played a lot of games as a kid."
 
 [node name="Hub3" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5139, -1.90735e-06, -102.211)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2056, -1.90735e-06, -145.638)
 text = "There's a row of massage chairs here."

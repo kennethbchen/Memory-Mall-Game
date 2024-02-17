@@ -91,7 +91,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.20132, -20.9097)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.776985, 2.20131, -136.964)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -104,7 +104,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55132, -20.9097)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.776985, 1.55131, -136.964)
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
 run_speed = 20.0

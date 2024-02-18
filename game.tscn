@@ -127,6 +127,16 @@ text = "This is the food court. This area is probably where I remember the most 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9476, -1.90735e-06, -15.1959)
 text = "I have very fond memories of this Piccadilly. As a child, my family would always go here and I loved eating the fried shrimp that they had. I don't remember for sure, but I think this closed down."
 
+[node name="ChickFilA" type="Node" parent="InfoAreas/FoodCourt"]
+
+[node name="CFA1" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10346, -1.90735e-06, -43.0931)
+text = "I distinctly remember the shape of this Chick-Fil-A. This is probably the first Chick-Fil-A that I've ever been to. I think I remember the walls were yellow and the floor was a laminate wood floor."
+
+[node name="CFA2" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8737, -1.90735e-06, -29.6442)
+text = "I think these were bathrooms."
+
 [node name="SouthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -30.258)
 text = "I don't remember a lot about the hallways that connect the main areas together. There's an Abercrombie & Fitch that I got clothes from one time. I also remember there being a Lids store which sold headwear."

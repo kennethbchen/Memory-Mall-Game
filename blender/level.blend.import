@@ -39,9 +39,25 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://materials/object_material.tres"
 },
-"Outline": {
+"Outline_1": {
 "use_external/enabled": true,
-"use_external/path": "res://materials/wiggle_outline_material.tres"
+"use_external/path": "res://materials/wiggle_outline_material_1.tres"
+},
+"Outline_2": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/wiggle_outline_material_2.tres"
+}
+},
+"meshes": {
+"level_Cube_0033": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
 }
 }
 }

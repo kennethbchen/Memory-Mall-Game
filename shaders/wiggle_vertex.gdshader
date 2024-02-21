@@ -4,7 +4,7 @@ render_mode unshaded, shadows_disabled, ambient_light_disabled;
 uniform vec3 outline_color: source_color = vec3(0.0);
 
 uniform float noise_sensitivity = 0.05;
-uniform float noise_range = 0.75;
+uniform float noise_range = 0.5;
 uniform sampler2D NOISE_TEXTURE;
 
 // Requires smooth shading on meshes

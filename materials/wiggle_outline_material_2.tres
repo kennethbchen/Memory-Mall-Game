@@ -1,6 +1,6 @@
-[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bnjsxeqdd3g8n"]
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bbehum30eg4ey"]
 
-[ext_resource type="Shader" path="res://shaders/wiggle_vertex.gdshader" id="1_pxkq5"]
+[ext_resource type="Shader" path="res://shaders/wiggle_vertex.gdshader" id="1_kffq6"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_dyke7"]
 fractal_octaves = 3
@@ -16,8 +16,8 @@ noise = SubResource("FastNoiseLite_dyke7")
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_pxkq5")
+shader = ExtResource("1_kffq6")
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/noise_sensitivity = 0.05
-shader_parameter/noise_range = 0.5
+shader_parameter/noise_range = 0.155
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_igv0r")

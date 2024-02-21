@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjlsiybcsefkc"
-path.s3tc="res://.godot/imported/text_box_9_slice.png-1ad7d9f098e798c2cdbb1529b2f94dd5.s3tc.ctex"
+uid="uid://dbah7kjjekm7p"
+path.s3tc="res://.godot/imported/Floor.png-05e15645f9189ec6e8b0e91dfe065600.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/text_box_9_slice.png"
-dest_files=["res://.godot/imported/text_box_9_slice.png-1ad7d9f098e798c2cdbb1529b2f94dd5.s3tc.ctex"]
+source_file="res://textures/Floor.png"
+dest_files=["res://.godot/imported/Floor.png-05e15645f9189ec6e8b0e91dfe065600.s3tc.ctex"]
 
 [params]
 

@@ -83,7 +83,8 @@ environment = SubResource("Environment_4xc2f")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
 transform = Transform3D(0.988867, 0.0161765, -0.147923, 0.148344, -0.185369, 0.971407, -0.0117065, -0.982536, -0.185705, -0.958255, 5.36524, -0.397825)
-light_color = Color(0.968627, 0.890196, 0.290196, 1)
+light_color = Color(0.721569, 0.654902, 0.0784314, 1)
+light_energy = 0.813
 shadow_enabled = true
 shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0

@@ -39,6 +39,10 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://materials/object_material.tres"
 },
+"Floor": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/floor_material.tres"
+},
 "Outline_1": {
 "use_external/enabled": true,
 "use_external/path": "res://materials/wiggle_outline_material_1.tres"

@@ -12,16 +12,29 @@ func _post_import(scene: Node):
 	for child in scene.get_children():
 		var obj_scene: PackedScene = PackedScene.new()
 		
-		var node = child
+		var node = child.duplicate()
 		node.position = Vector3.ZERO
+		
+		set_owner_recursive(node, node)
+		
 		var result = obj_scene.pack(node)
 		
-
-		#print(scene.get_path())
 		if result == OK:
-			var error = ResourceSaver.save(obj_scene, "res://imported_assets/" + child.name + ".tscn")
+			var error = ResourceSaver.save(obj_scene, "res://imported_assets/" + child.name + ".tscn", ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS | ResourceSaver.FLAG_BUNDLE_RESOURCES)
 			if error != OK:
 				push_error("An error occurred while saving the scene to disk.")
 				push_error(error)
+				
+			
 
 	return scene
+
+func set_owner_recursive(node: Node, new_owner: Node):
+	
+	if node != new_owner:
+		node.owner = new_owner
+	
+	for child in node.get_children():
+		
+		set_owner_recursive(child, new_owner)
+		print(child.owner)

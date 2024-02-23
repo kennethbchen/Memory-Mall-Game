@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/assets.blend-43fc8ce02ac56382a1622c74ee09ce1f
 [params]
 
 nodes/root_type=""
-nodes/root_name=""
+nodes/root_name="assets"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
@@ -23,13 +23,23 @@ meshes/create_shadow_meshes=true
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
 meshes/force_disable_compression=false
-skins/use_named_skins=true
+skins/use_named_skins=false
 animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
-import_script/path=""
+import_script/path="res://scripts/asset_import.gd"
 _subresources={
+"materials": {
+"AssetMaterial": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/asset_material.tres"
+},
+"Outline_2": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/wiggle_outline_material_2.tres"
+}
+},
 "meshes": {
 "MainScene_Table": {
 "generate/lightmap_uv": 0,
@@ -38,7 +48,7 @@ _subresources={
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": false,
-"save_to_file/make_streamable": "",
+"save_to_file/make_streamable": false,
 "save_to_file/path": "res://tempmesh.res"
 }
 }

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://do4njv4w62cnl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plquh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mf1t2"]
 albedo_color = Color(0.392157, 0.392157, 0.411765, 1)
 
-[sub_resource type="Shader" id="Shader_16rmy"]
+[sub_resource type="Shader" id="Shader_ltbwh"]
 code = "shader_type spatial;
 render_mode unshaded, shadows_disabled, ambient_light_disabled;
 
@@ -42,15 +42,15 @@ seamless_blend_skirt = 1.0
 normalize = false
 noise = SubResource("FastNoiseLite_dyke7")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6g4i6"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mx3ir"]
 render_priority = 0
-shader = SubResource("Shader_16rmy")
+shader = SubResource("Shader_ltbwh")
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/noise_sensitivity = 0.05
 shader_parameter/noise_range = 0.155
 shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_igv0r")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_18n1w"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_g87v7"]
 _surfaces = [{
 "aabb": AABB(-2.38419e-07, -2.63146, 0, 9.00001, 2.63147, 1.41814),
 "format": 34896613377,
@@ -74,7 +74,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6rp5s"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_pexlb"]
 resource_name = "MainScene_Cube_004"
 _surfaces = [{
 "aabb": AABB(-2.38419e-07, -2.63146, 0, 9.00001, 2.63147, 1.41814),
@@ -82,7 +82,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray(2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 18, 0, 15, 0, 21, 0, 18, 0, 12, 0, 15, 0, 6, 0, 23, 0, 10, 0, 6, 0, 19, 0, 23, 0, 13, 0, 4, 0, 17, 0, 13, 0, 0, 0, 4, 0, 7, 0, 14, 0, 20, 0, 7, 0, 1, 0, 14, 0, 22, 0, 3, 0, 9, 0, 22, 0, 16, 0, 3, 0),
-"material": SubResource("StandardMaterial3D_plquh"),
+"material": SubResource("StandardMaterial3D_mf1t2"),
 "name": "AssetMaterial",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -94,7 +94,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray(2, 0, 8, 0, 7, 0, 2, 0, 4, 0, 8, 0, 12, 0, 11, 0, 10, 0, 12, 0, 13, 0, 11, 0, 7, 0, 13, 0, 12, 0, 7, 0, 8, 0, 13, 0, 10, 0, 3, 0, 1, 0, 10, 0, 11, 0, 3, 0, 6, 0, 10, 0, 0, 0, 6, 0, 12, 0, 10, 0, 13, 0, 5, 0, 11, 0, 13, 0, 9, 0, 5, 0),
-"material": SubResource("ShaderMaterial_6g4i6"),
+"material": SubResource("ShaderMaterial_mx3ir"),
 "name": "Outline_2",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -102,8 +102,8 @@ _surfaces = [{
 "vertex_data": PackedByteArray(254, 255, 254, 255, 119, 255, 226, 232, 254, 255, 254, 255, 119, 255, 32, 217, 254, 255, 254, 255, 119, 255, 32, 217, 254, 255, 247, 238, 255, 255, 2, 240, 254, 255, 247, 238, 255, 255, 222, 239, 254, 255, 247, 238, 255, 255, 30, 247, 254, 255, 250, 255, 0, 0, 226, 246, 254, 255, 250, 255, 0, 0, 226, 190, 254, 255, 0, 0, 25, 25, 60, 227, 254, 255, 0, 0, 25, 25, 64, 187, 0, 0, 254, 255, 119, 255, 48, 245, 0, 0, 247, 238, 255, 255, 197, 233, 0, 0, 250, 255, 0, 0, 219, 221, 0, 0, 0, 0, 25, 25, 233, 190, 143, 173, 254, 244, 10, 59, 119, 181, 10, 59, 119, 181, 39, 78, 232, 181, 104, 78, 57, 182, 14, 252, 172, 165, 60, 226, 104, 232, 158, 73, 150, 136, 52, 121, 89, 186, 211, 227, 221, 178, 163, 160, 41, 67, 90, 193, 209, 85, 98, 141, 234, 87, 32, 205, 34, 111)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_18n1w")
+shadow_mesh = SubResource("ArrayMesh_g87v7")
 
 [node name="FoodMenu" type="MeshInstance3D"]
-mesh = SubResource("ArrayMesh_6rp5s")
+mesh = SubResource("ArrayMesh_pexlb")
 skeleton = NodePath("")

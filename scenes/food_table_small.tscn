@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy1mfgpnfwh8a"]
+
+[ext_resource type="PackedScene" uid="uid://bbr6gwmle6gvh" path="res://imported_assets/Table.tscn" id="1_ic46m"]
+[ext_resource type="PackedScene" uid="uid://6rqwek6jj16o" path="res://imported_assets/Chair.tscn" id="2_7oen7"]
+
+[node name="FoodTableSmall" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_ic46m")]
+
+[node name="Chair" parent="." instance=ExtResource("2_7oen7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.6, 0, 2.62268e-08)
+
+[node name="Chair2" parent="." instance=ExtResource("2_7oen7")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.6, 0, -2.62268e-08)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgc8n1iwbmtlw"]
+
+[ext_resource type="PackedScene" uid="uid://bbr6gwmle6gvh" path="res://imported_assets/Table.tscn" id="1_awxy3"]
+[ext_resource type="PackedScene" uid="uid://6rqwek6jj16o" path="res://imported_assets/Chair.tscn" id="2_wox0o"]
+
+[node name="FoodTableBig" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_awxy3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0184507, 0.00151658, 0.0156641)
+
+[node name="Table2" parent="." instance=ExtResource("1_awxy3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0184507, 0.00151658, -1.48434)
+
+[node name="Chair" parent="." instance=ExtResource("2_wox0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.2)
+
+[node name="Chair2" parent="." instance=ExtResource("2_wox0o")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.7, 0, -1.5)
+
+[node name="Chair3" parent="." instance=ExtResource("2_wox0o")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.7, 0, 0)
+
+[node name="Chair5" parent="." instance=ExtResource("2_wox0o")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.7, 0, 0)
+
+[node name="Chair6" parent="." instance=ExtResource("2_wox0o")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.7, 0, -1.5)
+
+[node name="Chair4" parent="." instance=ExtResource("2_wox0o")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.7)

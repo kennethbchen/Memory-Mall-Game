@@ -11,21 +11,8 @@ func _post_import(scene: Node):
 	
 	for child in scene.get_children():
 		
-		if not child is MeshInstance3D:
-			push_error("Skipping import for ", child)
-			
-		var filepath = "res://imported_assets/" + child.name + ".tscn"
 		
-		if FileAccess.file_exists(filepath):
-			var old = load(filepath).instantiate()
-			
-			# Check if file has changed
-			# Comparing only geometry probably isn't a very robust comparison.
-			# Materials / textures won't detect as changed but I think those
-			# are imported all the time anyways?
-			if child.mesh.get_faces() == old.mesh.get_faces():
-				# No Change, skip
-				continue
+		var filepath = "res://imported_assets/" + child.name + ".tscn"
 			
 		var obj_scene: PackedScene = PackedScene.new()
 		

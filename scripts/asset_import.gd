@@ -8,8 +8,25 @@ func _post_import(scene: Node):
 	
 	if not DirAccess.dir_exists_absolute("res://imported_assets/"):
 		DirAccess.make_dir_absolute("res://imported_assets/")
-		
+	
 	for child in scene.get_children():
+		
+		if not child is MeshInstance3D:
+			push_error("Skipping import for ", child)
+			
+		var filepath = "res://imported_assets/" + child.name + ".tscn"
+		
+		if FileAccess.file_exists(filepath):
+			var old = load(filepath).instantiate()
+			
+			# Check if file has changed
+			# Comparing only geometry probably isn't a very robust comparison.
+			# Materials / textures won't detect as changed but I think those
+			# are imported all the time anyways?
+			if child.mesh.get_faces() == old.mesh.get_faces():
+				# No Change, skip
+				continue
+			
 		var obj_scene: PackedScene = PackedScene.new()
 		
 		var node = child.duplicate()
@@ -20,12 +37,12 @@ func _post_import(scene: Node):
 		var result = obj_scene.pack(node)
 		
 		if result == OK:
-			var error = ResourceSaver.save(obj_scene, "res://imported_assets/" + child.name + ".tscn", ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS | ResourceSaver.FLAG_BUNDLE_RESOURCES)
+			var error = ResourceSaver.save(obj_scene, filepath, ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS | ResourceSaver.FLAG_BUNDLE_RESOURCES)
 			if error != OK:
 				push_error("An error occurred while saving the scene to disk.")
 				push_error(error)
 				
-			
+		print("Imported ", child.name)
 
 	return scene
 

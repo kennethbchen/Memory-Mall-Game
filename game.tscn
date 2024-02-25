@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bllxhb6p4l8cc" path="res://blender/level.blend" id="5_y5eys"]
 [ext_resource type="PackedScene" uid="uid://6rqwek6jj16o" path="res://imported_assets/Chair.tscn" id="9_3ecrn"]
 [ext_resource type="PackedScene" uid="uid://bbr6gwmle6gvh" path="res://imported_assets/Table.tscn" id="10_4xvtv"]
-[ext_resource type="PackedScene" uid="uid://do4njv4w62cnl" path="res://imported_assets/FoodMenu.tscn" id="11_q2b5p"]
+[ext_resource type="PackedScene" uid="uid://do4njv4w62cnl" path="res://imported_assets/FoodMenu1.tscn" id="11_q2b5p"]
 [ext_resource type="PackedScene" uid="uid://dklfirnq3jpaw" path="res://imported_assets/CashRegister.tscn" id="12_1axcq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]

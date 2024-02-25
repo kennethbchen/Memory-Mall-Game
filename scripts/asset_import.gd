@@ -39,6 +39,4 @@ func set_owner_recursive(node: Node, new_owner: Node):
 		node.owner = new_owner
 	
 	for child in node.get_children():
-		
 		set_owner_recursive(child, new_owner)
-		print(child.owner)

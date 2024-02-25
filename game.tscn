@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=19 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://do4njv4w62cnl" path="res://imported_assets/FoodMenu1.tscn" id="11_q2b5p"]
 [ext_resource type="PackedScene" uid="uid://dklfirnq3jpaw" path="res://imported_assets/CashRegister.tscn" id="12_1axcq"]
 [ext_resource type="PackedScene" uid="uid://bv0v2uc8m6jk4" path="res://imported_assets/FoodMenu2.tscn" id="13_vx3wj"]
+[ext_resource type="PackedScene" uid="uid://bic21pf8ruusv" path="res://imported_assets/DrinkCup.tscn" id="14_ic8ei"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -498,3 +499,6 @@ transform = Transform3D(-0.776046, 0, -0.630676, 0, 1, 0, 0.630676, 0, -0.776046
 
 [node name="FoodMenu1" parent="." instance=ExtResource("13_vx3wj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.625, 3.70675, 8.75791)
+
+[node name="DrinkCup" parent="." instance=ExtResource("14_ic8ei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9101, 0.928633, 3.88051)

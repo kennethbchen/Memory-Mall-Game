@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://churkko15lixu"]
+
+[ext_resource type="Shader" path="res://shaders/wiggle_2d_post_process.gdshader" id="1_13eck"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o6lgo"]
+fractal_octaves = 6
+fractal_weighted_strength = 0.4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_femgd"]
+seamless = true
+noise = SubResource("FastNoiseLite_o6lgo")
+
+[resource]
+shader = ExtResource("1_13eck")
+shader_parameter/wiggle_speed = 0.5
+shader_parameter/wiggle_period = Vector2(10.63, 5)
+shader_parameter/wiggle_range = Vector2(0.007, 0.007)
+shader_parameter/noise_strength = 0.0
+shader_parameter/NOISE_TEXTURE = SubResource("NoiseTexture2D_femgd")

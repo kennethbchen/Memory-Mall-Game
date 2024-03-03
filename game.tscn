@@ -114,7 +114,6 @@ script = ExtResource("1_ql8j7")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="UI"]
-visible = false
 material = ExtResource("2_0oc2v")
 anchors_preset = 15
 anchor_right = 1.0
@@ -218,25 +217,29 @@ text = "I am pretty sure that there are benches around the entrance. Though, I m
 [node name="ChickFilA" type="Node" parent="InfoAreas/FoodCourt"]
 
 [node name="CFA1" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10346, -1.90735e-06, -40.0931)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1035, -1.90735e-06, -41.0931)
 text = "I distinctly remember the shape of this Chick-Fil-A. This is probably the first Chick-Fil-A that I've ever been to. I think I remember the walls were yellow and the floor was a laminate wood floor."
 
 [node name="CFA2" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8737, -1.90735e-06, -29.6442)
 text = "I think these were bathrooms."
 
-[node name="SouthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -30.258)
+[node name="NorthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -135.258)
 text = "I don't remember a lot about the hallways that connect the main areas together. There's an Abercrombie & Fitch that I got clothes from one time. I also remember there being a Lids store which sold headwear."
+
+[node name="SouthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -51.258)
+text = "I remember the area near the Chick Fil-A opening up to a large area. I don't know if that means that the Chick Fil-A is next to the big hub area, but it's the only thing that makes sense from my memories. Maybe there's a second hub area?"
 
 [node name="Hub" type="Node" parent="InfoAreas"]
 
 [node name="Hub1" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -119.768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -75.1731)
 text = "This is what I see as the central hub area of the mall. It always had this trampoline ride thing where you would put on a harness which would allow you to jump very high and do flips. "
 
 [node name="Hub2" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2569, -9.53676e-07, -122.041)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2569, -9.53676e-07, -63.041)
 text = "I loved going to this GameStop as a kid. My family wouldn't really go out of the way to go to a GameStop, but we sometimes stopped by this one when we visited the mall. I played a lot of games as a kid."
 
 [node name="Hub3" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
@@ -832,22 +835,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22, 0,
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0, -34.5)
 
 [node name="TrashCan" parent="." instance=ExtResource("20_sk58x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -74)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -37)
 
 [node name="Map Display" parent="." instance=ExtResource("21_oyfff")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -61)
-
-[node name="Bench" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -64)
-
-[node name="Bench2" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -67)
-
-[node name="Bench3" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -55)
-
-[node name="Bench4" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -58)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -66.0386)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

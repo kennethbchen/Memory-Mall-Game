@@ -175,7 +175,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48341, 2.17487, -8.06604)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516586, 3.17487, -45.066)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -188,7 +188,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48341, 1.52487, -8.06604)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516586, 2.52487, -45.066)
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
 run_speed = 20.0
@@ -198,7 +198,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_41jpt")
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012392, 0.00151658, 0.00974226)
 
 [node name="InfoAreas" type="Node" parent="."]
 
@@ -851,7 +850,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
 
 [node name="Map Display" parent="." instance=ExtResource("21_oyfff")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -66.0386)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

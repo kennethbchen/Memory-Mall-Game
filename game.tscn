@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=32 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://yc6tf7shef8a" path="res://imported_assets/TrashCan.tscn" id="20_sk58x"]
 [ext_resource type="PackedScene" uid="uid://ewrklhgf5jdp" path="res://imported_assets/Map Display.tscn" id="21_oyfff"]
 [ext_resource type="PackedScene" uid="uid://dy1mfgpnfwh8a" path="res://scenes/food_table_small.tscn" id="24_5l7bw"]
+[ext_resource type="PackedScene" uid="uid://dgc8n1iwbmtlw" path="res://scenes/food_table_big.tscn" id="24_sdn65"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -217,7 +218,7 @@ text = "I am pretty sure that there are benches around the entrance. Though, I m
 [node name="ChickFilA" type="Node" parent="InfoAreas/FoodCourt"]
 
 [node name="CFA1" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1035, -1.90735e-06, -41.0931)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1035, -1.90735e-06, -39.0931)
 text = "I distinctly remember the shape of this Chick-Fil-A. This is probably the first Chick-Fil-A that I've ever been to. I think I remember the walls were yellow and the floor was a laminate wood floor."
 
 [node name="CFA2" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
@@ -787,55 +788,67 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
 [node name="CFA" type="Node" parent="Props/FoodCourtHallway"]
 
 [node name="FoodTableSmall" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -46)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -43)
 
 [node name="FoodTableSmall2" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -46)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -43)
 
 [node name="FoodTableSmall3" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -49)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -46)
 
 [node name="FoodTableSmall4" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -49)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -46)
 
 [node name="FoodTableSmall5" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -31.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -29.5)
 
 [node name="FoodTableSmall6" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -31.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -29.5)
 
 [node name="FoodTableSmall9" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -28.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -26.5)
 
 [node name="FoodTableSmall10" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -28.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -26.5)
 
 [node name="FoodTableSmall7" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -34.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -32.5)
 
 [node name="FoodTableSmall8" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -34.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -32.5)
 
 [node name="FoodTableSmall11" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0, -31.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -29.5)
 
 [node name="FoodTableSmall12" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22, 0, -31.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -29.5)
 
 [node name="FoodTableSmall13" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0, -28.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -26.5)
 
 [node name="FoodTableSmall14" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22, 0, -28.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -26.5)
 
 [node name="FoodTableSmall15" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22, 0, -34.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -32.5)
 
 [node name="FoodTableSmall16" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20, 0, -34.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -32.5)
+
+[node name="FoodTableSmall17" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -38.5)
+
+[node name="FoodTableSmall18" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -38.5)
+
+[node name="FoodTableSmall19" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -35.5)
+
+[node name="FoodTableSmall20" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -35.5)
 
 [node name="TrashCan" parent="." instance=ExtResource("20_sk58x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -37)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
 
 [node name="Map Display" parent="." instance=ExtResource("21_oyfff")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -66.0386)
@@ -843,3 +856,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("BoxMesh_xf85q")
+
+[node name="FoodTableBig" parent="." instance=ExtResource("24_sdn65")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0, -26.5)

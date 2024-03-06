@@ -247,7 +247,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.2056, -1.90735e-06, -94.63
 text = "There's a row of massage chairs here."
 
 [node name="Hub4" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2056, -1.90735e-06, -94.638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2056, -1.90735e-06, -94.638)
 text = "There's a fountain here. I've never seen it actually working, though."
 
 [node name="Props" type="Node" parent="."]

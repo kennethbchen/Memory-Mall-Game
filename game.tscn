@@ -235,16 +235,20 @@ text = "I remember the area near the Chick Fil-A opening up to a large area. I d
 [node name="Hub" type="Node" parent="InfoAreas"]
 
 [node name="Hub1" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -75.1731)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -71.1731)
 text = "This is what I see as the central hub area of the mall. It always had this trampoline ride thing where you would put on a harness which would allow you to jump very high and do flips. "
 
 [node name="Hub2" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2569, -9.53676e-07, -63.041)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2569, -9.53676e-07, -64.041)
 text = "I loved going to this GameStop as a kid. My family wouldn't really go out of the way to go to a GameStop, but we sometimes stopped by this one when we visited the mall. I played a lot of games as a kid."
 
 [node name="Hub3" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2056, -1.90735e-06, -145.638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.2056, -1.90735e-06, -94.638)
 text = "There's a row of massage chairs here."
+
+[node name="Hub4" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2056, -1.90735e-06, -94.638)
+text = "There's a fountain here. I've never seen it actually working, though."
 
 [node name="Props" type="Node" parent="."]
 

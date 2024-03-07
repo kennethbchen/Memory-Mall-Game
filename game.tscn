@@ -7,7 +7,7 @@
 [ext_resource type="Material" uid="uid://ddowawmcjkhc0" path="res://materials/wiggle_2d_material.tres" id="2_ih32k"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_lntuk"]
 [ext_resource type="Texture2D" uid="uid://bjlsiybcsefkc" path="res://textures/text_box_9_slice.png" id="4_23e4b"]
-[ext_resource type="PackedScene" uid="uid://orog4etuspw7" path="res://info_area.tscn" id="5_dp3gq"]
+[ext_resource type="PackedScene" uid="uid://orog4etuspw7" path="res://scenes/info_area.tscn" id="5_dp3gq"]
 [ext_resource type="PackedScene" uid="uid://bllxhb6p4l8cc" path="res://blender/level.blend" id="5_y5eys"]
 [ext_resource type="PackedScene" uid="uid://6rqwek6jj16o" path="res://imported_assets/Chair.tscn" id="9_3ecrn"]
 [ext_resource type="PackedScene" uid="uid://bbr6gwmle6gvh" path="res://imported_assets/Table.tscn" id="10_4xvtv"]
@@ -224,6 +224,12 @@ text = "I distinctly remember the shape of this Chick-Fil-A. This is probably th
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8737, -1.90735e-06, -29.6442)
 text = "I think these were bathrooms."
 
+[node name="FoodTableBig" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("24_sdn65")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0, -26.5)
+
+[node name="TrashCan" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
+
 [node name="NorthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -135.258)
 text = "I don't remember a lot about the hallways that connect the main areas together. There's an Abercrombie & Fitch that I got clothes from one time. I also remember there being a Lids store which sold headwear."
@@ -246,13 +252,54 @@ text = "I loved going to this GameStop as a kid. My family wouldn't really go ou
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.2056, 0.299998, -94.038)
 text = "There's a row of massage chairs here."
 
+[node name="Hub6" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.2056, 0.299998, -94.038)
+text = "This is probably where Sears was. It's at least one of the three big stores I remember in the mall (Sears, JC Penny, and Dillards). I haven't been to any of them in a long time."
+
 [node name="Hub5" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2056, 0.299998, -86.038)
 text = "I remember these huge plant pots that were in various places around the mall."
 
+[node name="Hub7" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2056, 0.299998, -81.038)
+text = "There are probably stores along these walls, but I don't remember them at all."
+
 [node name="Hub4" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2056, -1.90735e-06, -94.638)
 text = "There's a fountain here. I've never seen it actually working, though."
+
+[node name="Map Display" parent="InfoAreas/Hub" instance=ExtResource("21_oyfff")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
+
+[node name="Bench" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -90)
+
+[node name="Bench2" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -98)
+
+[node name="Bench3" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -90)
+
+[node name="Bench4" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -98)
+
+[node name="Sears" type="Node" parent="InfoAreas"]
+
+[node name="Sears1" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180, 0, -94)
+text = "This is another entrance to the mall. I think that this is the one that my family used the most. I remember making many long treks across Sears."
+
+[node name="Sears2" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 165.6, 0, -100)
+text = "I feel like being brought along to a clothing store and seeing the many, many rows of clothes is a common childhood experience. I remember wandering around areas like this and weaving in and out of the clothes like bushes in the wilderness."
+
+[node name="Sears4" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.6, 0, -123)
+text = "This was the entrance to the part of Sears where they sold many things other than clothes."
+
+[node name="Sears3" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.1, 0, -112)
+text = "I remember standing in the middle of these rings of clothes and just hiding there."
 
 [node name="Props" type="Node" parent="."]
 
@@ -854,27 +901,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0,
 [node name="FoodTableSmall20" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -35.5)
 
-[node name="TrashCan" parent="." instance=ExtResource("20_sk58x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
-
-[node name="Map Display" parent="." instance=ExtResource("21_oyfff")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("BoxMesh_xf85q")
-
-[node name="FoodTableBig" parent="." instance=ExtResource("24_sdn65")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0, -26.5)
-
-[node name="Bench" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -90)
-
-[node name="Bench2" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -98)
-
-[node name="Bench3" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -90)
-
-[node name="Bench4" parent="." instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -98)

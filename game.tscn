@@ -189,6 +189,7 @@ current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.517, 2.52487, -86.066)
+floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
 run_speed = 20.0

@@ -175,7 +175,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516586, 3.17487, -45.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.517, 3.17487, -86.066)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -188,7 +188,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.516586, 2.52487, -45.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.517, 2.52487, -86.066)
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
 run_speed = 20.0
@@ -245,6 +245,10 @@ text = "I loved going to this GameStop as a kid. My family wouldn't really go ou
 [node name="Hub3" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.2056, 0.299998, -94.038)
 text = "There's a row of massage chairs here."
+
+[node name="Hub5" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2056, 0.299998, -86.038)
+text = "I remember these huge plant pots that were in various places around the mall."
 
 [node name="Hub4" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2056, -1.90735e-06, -94.638)

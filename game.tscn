@@ -175,7 +175,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.517, 3.17487, -86.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.517, 3.17487, -176.066)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -188,7 +188,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.517, 2.52487, -86.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118.517, 2.52487, -176.066)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -269,21 +269,6 @@ text = "There are probably stores along these walls, but I don't remember them a
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2056, -1.90735e-06, -94.638)
 text = "There's a fountain here. I've never seen it actually working, though."
 
-[node name="Map Display" parent="InfoAreas/Hub" instance=ExtResource("21_oyfff")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
-
-[node name="Bench" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -90)
-
-[node name="Bench2" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -98)
-
-[node name="Bench3" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -90)
-
-[node name="Bench4" parent="InfoAreas/Hub" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -98)
-
 [node name="Sears" type="Node" parent="InfoAreas"]
 
 [node name="Sears1" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
@@ -295,7 +280,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 165.6, 0, -100)
 text = "I feel like being brought along to a clothing store and seeing the many, many rows of clothes is a common childhood experience. I remember wandering around areas like this and weaving in and out of the clothes like bushes in the wilderness."
 
 [node name="Sears4" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.6, 0, -123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.6, 0.3, -123)
 text = "This was the entrance to the part of Sears where they sold many things other than clothes."
 
 [node name="Sears3" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
@@ -305,6 +290,26 @@ text = "I remember standing in the middle of these rings of clothes and just hid
 [node name="Sears5" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.1, 0, -150)
 text = "This area is dedicated to outdoor home equipment like tents, chairs, and lights."
+
+[node name="Sears6" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.1, 0, -181)
+text = "This part had smaller electronic appliances like coffee makers and microwaves."
+
+[node name="Sears7" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.1, 0, -181)
+text = "This area had larger electronic appliances like washing machines, drying machines, and ovens."
+
+[node name="Sears9" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.1, 0, -148)
+text = "I have no clue what this area had."
+
+[node name="Sears8" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.1, 0.2, -233)
+text = "This place had a lot of tools and other home improvement type stuff.  I remember coming to this place with my dad when he needed to buy new tools."
+
+[node name="Sears10" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.1, 0, -279)
+text = "There's another entrance into the mall here. I remember using this one a small handful of times."
 
 [node name="Props" type="Node" parent="."]
 
@@ -841,6 +846,21 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 
 
 [node name="TrashCan" parent="Props/FoodCourt" instance=ExtResource("20_sk58x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+
+[node name="Map Display" parent="Props/FoodCourt" instance=ExtResource("21_oyfff")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
+
+[node name="Bench9" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -90)
+
+[node name="Bench10" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -98)
+
+[node name="Bench11" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -90)
+
+[node name="Bench12" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -98)
 
 [node name="FoodCourtHallway" type="Node" parent="Props"]
 

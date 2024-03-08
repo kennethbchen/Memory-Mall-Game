@@ -302,6 +302,10 @@ text = "This was the entrance to the part of Sears where they sold many things o
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.1, 0, -112)
 text = "I remember standing in the middle of these rings of clothes and just hiding there."
 
+[node name="Sears5" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.1, 0, -150)
+text = "This area is dedicated to outdoor home equipment like tents, chairs, and lights."
+
 [node name="Props" type="Node" parent="."]
 
 [node name="FoodCourt" type="Node" parent="Props"]

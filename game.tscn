@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=34 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://ewrklhgf5jdp" path="res://imported_assets/Map Display.tscn" id="21_oyfff"]
 [ext_resource type="PackedScene" uid="uid://dy1mfgpnfwh8a" path="res://scenes/food_table_small.tscn" id="24_5l7bw"]
 [ext_resource type="PackedScene" uid="uid://dgc8n1iwbmtlw" path="res://scenes/food_table_big.tscn" id="24_sdn65"]
+[ext_resource type="PackedScene" uid="uid://yrhp66o46184" path="res://imported_assets/Table2.tscn" id="25_neuuv"]
+[ext_resource type="PackedScene" uid="uid://dgwyfdkqytb0u" path="res://imported_assets/Chair2.tscn" id="25_oocf2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -199,7 +201,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_41jpt")
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-metadata/_edit_lock_ = true
 
 [node name="InfoAreas" type="Node" parent="."]
 
@@ -225,9 +226,6 @@ text = "I distinctly remember the shape of this Chick-Fil-A. This is probably th
 [node name="CFA2" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8737, -1.90735e-06, -29.6442)
 text = "I think these were bathrooms."
-
-[node name="FoodTableBig" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("24_sdn65")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0, -26.5)
 
 [node name="TrashCan" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("20_sk58x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
@@ -312,620 +310,728 @@ text = "This place had a lot of tools and other home improvement type stuff.  I 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.1, 0, -279)
 text = "There's another entrance into the mall here. I remember using this one a small handful of times."
 
+[node name="Lenscraft" type="Node" parent="InfoAreas"]
+
+[node name="Lenscraft1" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -217)
+text = "This was a Lenscrafters. I've had poor eyesight all my life, so I remember coming here often to get new glasses. I think a couple of years ago, they closed or relocated somewhere else."
+
+[node name="Lenscraft2" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -217)
+text = "They had these seating areas where you would test out glasses and talk to someone at the store."
+
+[node name="Lenscraft4" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, -225)
+text = "There were rows and rows of different glasses frames on display."
+
+[node name="Lenscraft3" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, -215)
+text = "This area was where they did testing on your eye health. They had the machine that would blow air into your eyes and the one where you would focus on an image of a house."
+
+[node name="Lenscraft6" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.4, 0, -219)
+text = "This was an office space. I think I only ever saw it once."
+
+[node name="Lenscraft7" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.4, 0, -211)
+text = "I don't remember seeing the inside of any of these rooms."
+
+[node name="Lenscraft5" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4, 0, -218.9)
+text = "This is where you would do the vision test with the eye doctor to figure out your prescription. I don't think that I've ever been afraid of doing this vision test, unlike how I've heard others talk about it."
+
+[node name="Lenscraft8" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.4, 0, -223.9)
+text = "The board that you look at while sitting down is reflected a couple of times in mirrors around the room. Most likely to get the right distance for the test."
+
+[node name="PlaygroundHub" type="Node" parent="InfoAreas"]
+
+[node name="PlaygroundHub1" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -240)
+text = "I remember this area always being closed down."
+
 [node name="Props" type="Node" parent="."]
 
-[node name="FoodCourt" type="Node" parent="Props"]
+[node name="FoodCourt Props" type="Node" parent="Props"]
 
-[node name="FoodTableBig" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableBig" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.984143, 0, -0.177377, 0, 1, 0, 0.177377, 0, 0.984143, -14.6083, 0, 5.763)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0184507, 0.00151658, 0.0156641)
 
-[node name="Table2" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("10_4xvtv")]
+[node name="Table2" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999229, 0, 0.0392598, 0, 1, 0, -0.0392598, 0, 0.999229, 0.0184507, 0.00151658, -1.53189)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.993552, 0, 0.113377, 0, 1, 0, -0.113377, 0, 0.993552, 0, 0, -2.39935)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.19134, 0, 0)
 
-[node name="Chair5" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("9_3ecrn")]
+[node name="Chair5" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.319737, 0, -0.947506, 0, 1, 0, 0.947506, 0, -0.319737, 0.992258, 0, 0)
 
-[node name="Chair6" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("9_3ecrn")]
+[node name="Chair6" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.276225, 0, -0.961093, 0, 1, 0, 0.961093, 0, 0.276225, 0.923864, 0, -1.5)
 
-[node name="Chair4" parent="Props/FoodCourt/FoodTableBig" instance=ExtResource("9_3ecrn")]
+[node name="Chair4" parent="Props/FoodCourt Props/FoodTableBig" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.925051, 0, 0.379844, 0, 1, 0, -0.379844, 0, -0.925051, 0, 0, 0.880069)
 
-[node name="FoodTableBig2" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableBig2" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.99821, 0, 0.0598116, 0, 1, 0, -0.0598116, 0, 0.99821, -14.5652, 0, 1.09132)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999085, 0, 0.042765, 0, 1, 0, -0.042765, 0, 0.999085, -0.00317097, 0.00151658, 0.0760506)
 
-[node name="Table2" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("10_4xvtv")]
+[node name="Table2" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999584, 0, -0.0288288, 0, 1, 0, 0.0288288, 0, 0.999584, 0.0400724, 0.00151658, -1.48403)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.965473, 0, 0.260505, 0, 1, 0, -0.260505, 0, 0.965473, -0.34695, 0, -2.24561)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.19788, 0, 0.980226, 0, 1, 0, -0.980226, 0, 0.19788, -0.84697, 0, -1.28052)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.164256, 0, 0.986418, 0, 1, 0, -0.986418, 0, -0.164256, -0.881215, 0, 0)
 
-[node name="Chair5" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("9_3ecrn")]
+[node name="Chair5" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.223863, 0, -0.974621, 0, 1, 0, 0.974621, 0, 0.223863, 0.733487, 0, 0.234207)
 
-[node name="Chair6" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("9_3ecrn")]
+[node name="Chair6" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.406864, 0, -0.913489, 0, 1, 0, 0.913489, 0, -0.406864, 0.770188, 0, -1.45152)
 
-[node name="Chair4" parent="Props/FoodCourt/FoodTableBig2" instance=ExtResource("9_3ecrn")]
+[node name="Chair4" parent="Props/FoodCourt Props/FoodTableBig2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.915563)
 
-[node name="FoodTableBig3" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableBig3" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.997167, 0, -0.0752224, 0, 1, 0, 0.0752224, 0, 0.997167, -14.8573, 0, -4.65425)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999673, 0, 0.0255663, 0, 1, 0, -0.0255663, 0, 0.999673, 0.0376253, 0.00151658, 0.0806398)
 
-[node name="Table2" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("10_4xvtv")]
+[node name="Table2" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999673, 0, 0.0255663, 0, 1, 0, -0.0255663, 0, 0.999673, -0.000723839, 0.00151658, -1.48409)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.295783, 0, -2.58491)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.131305, 0, 0.991342, 0, 1, 0, -0.991342, 0, 0.131305, -0.81719, 0, -1.45923)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.103417, 0, 0.994638, 0, 1, 0, -0.994638, 0, 0.103417, -0.843485, 0, 0.172912)
 
-[node name="Chair5" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("9_3ecrn")]
+[node name="Chair5" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.119513, 0, -0.992833, 0, 1, 0, 0.992833, 0, 0.119513, 1.23546, 0, -0.0454631)
 
-[node name="Chair6" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("9_3ecrn")]
+[node name="Chair6" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.357032, 0, -0.934092, 0, 1, 0, 0.934092, 0, 0.357032, 0.759828, 0, -1.33613)
 
-[node name="Chair4" parent="Props/FoodCourt/FoodTableBig3" instance=ExtResource("9_3ecrn")]
+[node name="Chair4" parent="Props/FoodCourt Props/FoodTableBig3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.996344, 0, -0.0854344, 0, 1, 0, 0.0854344, 0, -0.996344, 0.451485, 0, 0.846915)
 
-[node name="FoodTableBig4" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableBig4" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.953085, 0, 0.302703, 0, 1, 0, -0.302703, 0, 0.953085, -14.5376, 0, -9.66411)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0184507, 0.00151658, 0.15968)
 
-[node name="Table2" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("10_4xvtv")]
+[node name="Table2" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999473, 0, 0.0324749, 0, 1, 0, -0.0324749, 0, 0.999473, 0.0184507, 0.00151658, -1.48434)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.968644, 0, 0.248453, 0, 1, 0, -0.248453, 0, 0.968644, 0, 0, -2.46788)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.231697, 0, 0.972788, 0, 1, 0, -0.972788, 0, 0.231697, -0.984159, 0, -1.5)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.887309, 0, 0.461176, 0, 1, 0, -0.461176, 0, -0.887309, -0.913466, 0, 0.365147)
 
-[node name="Chair5" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("9_3ecrn")]
+[node name="Chair5" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.173356, 0, -0.984859, 0, 1, 0, 0.984859, 0, -0.173356, 0.7, 0, 0.269341)
 
-[node name="Chair6" parent="Props/FoodCourt/FoodTableBig4" instance=ExtResource("9_3ecrn")]
+[node name="Chair6" parent="Props/FoodCourt Props/FoodTableBig4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.204992, 0, -0.978764, 0, 1, 0, 0.978764, 0, 0.204992, 0.840149, 0, -1.34421)
 
-[node name="FoodTableSmall" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 6.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.976878, 0, 0.213798, 0, 1, 0, -0.213798, 0, 0.976878, 0, 0, 0)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.869055, 0, 0.494716, 0, 1, 0, -0.494716, 0, 0.869055, -0.0135708, 0, -0.969966)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.137877, 0, -0.990449, 0, 1, 0, 0.990449, 0, -0.137877, 0.846586, 0, 0)
 
-[node name="FoodTableSmall2" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall2" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 6.83581)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall2" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall2" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999267, 0, -0.0382832, 0, 1, 0, 0.0382832, 0, 0.999267, 0, 0, 0)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall2" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.844823, 0, 0.535045, 0, 1, 0, -0.535045, 0, -0.844823, -0.0356941, 0, 0.833108)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall2" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall2" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.983521, 0, 0.180794, 0, 1, 0, -0.180794, 0, 0.983521, 0.0334301, 0, -0.811905)
 
-[node name="FoodTableSmall3" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall3" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 3.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall3" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall3" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.997771, 0, 0.0667267, 0, 1, 0, -0.0667267, 0, 0.997771, -0.0733509, 0, -0.197404)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall3" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.190535, 0, 0.98168, 0, 1, 0, -0.98168, 0, 0.190535, -0.861614, 0, 0)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall3" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall3" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.0634351, 0, -0.997986, 0, 1, 0, 0.997986, 0, 0.0634351, 0.886145, 0, 0)
 
-[node name="FoodTableSmall4" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall4" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7654, 0, 3.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall4" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall4" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.994369, 0, -0.105969, 0, 1, 0, 0.105969, 0, 0.994369, -0.38752, 0, 0)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall4" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.99218, 0, 0.124814, 0, 1, 0, -0.124814, 0, 0.99218, -0.437952, 0, -1.01668)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall4" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall4" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.0418058, 0, -0.999126, 0, 1, 0, 0.999126, 0, -0.0418058, 0.643248, 0, 0)
 
-[node name="FoodTableSmall5" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall5" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 6.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall5" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall5" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.977504, 0, -0.210915, 0, 1, 0, 0.210915, 0, 0.977504, 0, 0, 0.0776668)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall5" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall5" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.870825, 0, -0.0053587)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall5" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall5" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.319406, 0, -0.947618, 0, 1, 0, 0.947618, 0, -0.319406, 0.908775, 0, 0.271938)
 
-[node name="FoodTableSmall7" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall7" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7654, 0, 3.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall7" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall7" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999691, 0, -0.0248684, 0, 1, 0, 0.0248684, 0, 0.999691, 1.06753, 0, 0)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall7" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall7" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.421875, 0, 0.906654, 0, 1, 0, -0.906654, 0, -0.421875, -0.474792, 0, 0)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall7" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall7" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.970279, 0, -0.241989, 0, 1, 0, 0.241989, 0, 0.970279, 0.78034, 0, -0.915915)
 
-[node name="FoodTableSmall9" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall9" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -0.0185872)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall9" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall9" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.122974, 0, 0)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall9" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall9" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.99997, 0, 0.00778408, 0, 1, 0, -0.00778408, 0, -0.99997, 0.0760021, 0, 0.967676)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall9" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall9" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.177394, 0, -0.98414, 0, 1, 0, 0.98414, 0, -0.177394, 0.773375, 0, -2.98023e-08)
 
-[node name="FoodTableSmall10" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall10" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.508163)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall10" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall10" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.994102, 0, 0.10845, 0, 1, 0, -0.10845, 0, 0.994102, 0, 0, 0.218372)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall10" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall10" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.99116, 0, 0.132672, 0, 1, 0, -0.132672, 0, 0.99116, -0.103724, 0, -0.73043)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall10" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall10" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.0618846, 0, -0.998083, 0, 1, 0, 0.998083, 0, -0.0618846, 0.738941, 0, -2.98023e-08)
 
-[node name="FoodTableSmall11" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall11" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -5.43716)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall11" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall11" instance=ExtResource("10_4xvtv")]
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall11" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall11" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.143804, 0, 0.989606, 0, 1, 0, -0.989606, 0, -0.143804, -0.6, 0, 0)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall11" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall11" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.171276, 0, -0.985223, 0, 1, 0, 0.985223, 0, -0.171276, 0.754841, 0, 0.16714)
 
-[node name="FoodTableSmall12" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall12" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -5.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall12" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall12" instance=ExtResource("10_4xvtv")]
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall12" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall12" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.255733, 0, 0.966748, 0, 1, 0, -0.966748, 0, -0.255733, -0.829674, 0, 0)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall12" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall12" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.936421, 0, -0.350877, 0, 1, 0, 0.350877, 0, 0.936421, -0.0011692, 0, -1.01668)
 
-[node name="FoodTableSmall13" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall13" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.839933, 0, 0.542691, 0, 1, 0, -0.542691, 0, 0.839933, -24, 0, 0.0221947)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableSmall13" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableSmall13" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.904507, 0, -0.426458, 0, 1, 0, 0.426458, 0, 0.904507, 0.373049, 0, -0.97969)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall13" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall13" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.999855, 0, 0.0170336, 0, 1, 0, -0.0170336, 0, 0.999855, 0, 0, 0.117093)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall13" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall13" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.108086, 0, 0.994142, 0, 1, 0, -0.994142, 0, 0.108086, -0.713781, 0, 2.98023e-08)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall13" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall13" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.6, 0, -2.62268e-08)
 
-[node name="FoodTableSmall15" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall15" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -5.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall15" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall15" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.992047, 0, 0.12587, 0, 1, 0, -0.12587, 0, 0.992047, 0, 0, -0.157391)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall15" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall15" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.03506, 0, 0)
 
-[node name="FoodTableSmall17" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall17" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -8.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall17" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall17" instance=ExtResource("10_4xvtv")]
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall17" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall17" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.34015, 0, 0.940371, 0, 1, 0, -0.940371, 0, -0.34015, -0.79706, 0, 0.137078)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableSmall17" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableSmall17" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.992675, 0, 0.120812, 0, 1, 0, -0.120812, 0, -0.992675, 0.0720139, 2.38419e-07, 1.00046)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall17" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall17" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.26288, 0, -0.964829, 0, 1, 0, 0.964829, 0, -0.26288, 0.758068, 0, 0)
 
-[node name="FoodTableSmall18" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall18" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.995673, 0, -0.0929267, 0, 1, 0, 0.0929267, 0, 0.995673, -21.1597, 0, -8.53895)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall18" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall18" instance=ExtResource("10_4xvtv")]
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall18" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall18" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.0410561, 0, 0.999157, 0, 1, 0, -0.999157, 0, 0.0410561, -0.814863, -2.38419e-07, 0.109662)
 
-[node name="Chair3" parent="Props/FoodCourt/FoodTableSmall18" instance=ExtResource("9_3ecrn")]
+[node name="Chair3" parent="Props/FoodCourt Props/FoodTableSmall18" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.999295, 0, 0.0375682, 0, 1, 0, -0.0375682, 0, 0.999295, -0.030035, -7.15256e-07, -0.858926)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall18" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall18" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.267861, 0, -0.963458, 0, 1, 0, 0.963458, 0, 0.267861, 0.764944, 0, -0.0153952)
 
-[node name="FoodTableSmall19" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall19" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -11.3)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall19" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall19" instance=ExtResource("10_4xvtv")]
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall19" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall19" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.380344, 0, 0.924845, 0, 1, 0, -0.924845, 0, -0.380344, -0.970686, 0, 0)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall19" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall19" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.219761, 0, -0.975554, 0, 1, 0, 0.975554, 0, 0.219761, 0.717926, 0, -0.360244)
 
-[node name="FoodTableSmall20" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall20" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.972573, 0, -0.232597, 0, 1, 0, 0.232597, 0, 0.972573, -21.2654, 0, -11.8978)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall20" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall20" instance=ExtResource("10_4xvtv")]
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall20" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall20" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.141506, 0, 0.989938, 0, 1, 0, -0.989938, 0, 0.141506, -0.756977, 0, -0.260456)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall20" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall20" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.228691, 0, -0.973499, 0, 1, 0, 0.973499, 0, -0.228691, 0.82476, 0, 0)
 
-[node name="FoodTableSmall21" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall21" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(0.973913, 0, -0.226923, 0, 1, 0, 0.226923, 0, 0.973913, -24.934, 0, -7.6704)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall21" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall21" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.97568, 0, 0.219199, 0, 1, 0, -0.219199, 0, 0.97568, -0.143064, 0, -0.613976)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall21" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall21" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-0.443634, 0, 0.896208, 0, 1, 0, -0.896208, 0, -0.443634, -1.0143, 0, -0.423651)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall21" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall21" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(0.122095, 0, -0.992519, 0, 1, 0, 0.992519, 0, 0.122095, 0.620203, 0, -0.518669)
 
-[node name="FoodTableSmall23" type="Node3D" parent="Props/FoodCourt"]
+[node name="FoodTableSmall23" type="Node3D" parent="Props/FoodCourt Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0944, 0, -10.6704)
 
-[node name="Table" parent="Props/FoodCourt/FoodTableSmall23" instance=ExtResource("10_4xvtv")]
+[node name="Table" parent="Props/FoodCourt Props/FoodTableSmall23" instance=ExtResource("10_4xvtv")]
 transform = Transform3D(0.991461, 0, 0.130405, 0, 1, 0, -0.130405, 0, 0.991461, 0, 0, 0.669172)
 
-[node name="Chair" parent="Props/FoodCourt/FoodTableSmall23" instance=ExtResource("9_3ecrn")]
+[node name="Chair" parent="Props/FoodCourt Props/FoodTableSmall23" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.678503, 0, 0.894664)
 
-[node name="Chair2" parent="Props/FoodCourt/FoodTableSmall23" instance=ExtResource("9_3ecrn")]
+[node name="Chair2" parent="Props/FoodCourt Props/FoodTableSmall23" instance=ExtResource("9_3ecrn")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 0.72444, 0, 0.829782)
 
-[node name="DrinkCup" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1987, 0.928633, 3.75651)
 
-[node name="DrinkCup2" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup2" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.0907, 0.941052, 6.27207)
 
-[node name="DrinkCup3" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup3" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9681, 0.941052, -0.159109)
 
-[node name="DrinkCup4" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup4" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5205, 0.941052, 6.3018)
 
-[node name="DrinkCup5" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup5" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0056, 0.942569, 6.25793)
 
-[node name="DrinkCup6" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup6" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1149, 0.942569, 5.6963)
 
-[node name="DrinkCup7" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup7" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(0.85326, 0, -0.521486, 0, 1, 0, 0.521486, 0, 0.85326, -14.2439, 0.942568, 5.4137)
 
-[node name="DrinkCup8" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup8" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9385, 0.942568, 4.53757)
 
-[node name="DrinkCup9" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup9" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0586, 0.941052, 0.529215)
 
-[node name="DrinkCup10" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup10" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0894, 0.941052, -8.28032)
 
-[node name="DrinkCup11" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup11" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6156, 0.941052, -8.8248)
 
-[node name="DrinkCup12" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup12" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0803, 0.942569, -9.46003)
 
-[node name="DrinkCup13" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup13" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6342, 0.942569, -11.3838)
 
-[node name="DrinkCup14" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup14" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4841, 0.942569, -4.70908)
 
-[node name="DrinkCup15" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup15" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1864, 0.942569, -6.1508)
 
-[node name="DrinkCup16" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup16" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1541, 0.941052, -8.31338)
 
-[node name="DrinkCup17" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup17" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5001, 0.941052, -8.12041)
 
-[node name="DrinkCup18" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup18" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4366, 0.941052, -10.3317)
 
-[node name="DrinkCup19" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup19" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6168, 0.941052, -9.87211)
 
-[node name="DrinkCup20" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup20" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8165, 0.941051, -0.220022)
 
-[node name="DrinkCup21" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup21" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5635, 0.941052, 6.63008)
 
-[node name="DrinkCup22" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup22" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9988, 0.941052, 7.14104)
 
-[node name="DrinkCup23" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup23" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8819, 0.941052, 6.62768)
 
-[node name="FoodMenu" parent="Props/FoodCourt" instance=ExtResource("11_q2b5p")]
+[node name="FoodMenu" parent="Props/FoodCourt Props" instance=ExtResource("11_q2b5p")]
 transform = Transform3D(-0.73605, 0, 0.676927, 0, 1, 0, -0.676927, 0, -0.73605, -32.0414, 3.88743, 21.9052)
 
-[node name="CashRegister" parent="Props/FoodCourt" instance=ExtResource("12_1axcq")]
+[node name="CashRegister" parent="Props/FoodCourt Props" instance=ExtResource("12_1axcq")]
 transform = Transform3D(0.753357, 0, -0.657612, 0, 1, 0, 0.657612, 0, 0.753357, -34.4668, 0.802853, 13.3322)
 
-[node name="CashRegister2" parent="Props/FoodCourt" instance=ExtResource("12_1axcq")]
+[node name="CashRegister2" parent="Props/FoodCourt Props" instance=ExtResource("12_1axcq")]
 transform = Transform3D(-0.0125136, 0, -0.999922, 0, 1, 0, 0.999922, 0, -0.0125136, -36.7936, 0.802854, 2.10703)
 
-[node name="CashRegister3" parent="Props/FoodCourt" instance=ExtResource("12_1axcq")]
+[node name="CashRegister3" parent="Props/FoodCourt Props" instance=ExtResource("12_1axcq")]
 transform = Transform3D(-0.0125136, 0, -0.999922, 0, 1, 0, 0.999922, 0, -0.0125136, -36.6302, 0.802854, -10.952)
 
-[node name="CashRegister4" parent="Props/FoodCourt" instance=ExtResource("12_1axcq")]
+[node name="CashRegister4" parent="Props/FoodCourt Props" instance=ExtResource("12_1axcq")]
 transform = Transform3D(-0.776046, 0, -0.630676, 0, 1, 0, 0.630676, 0, -0.776046, -29.438, 0.802854, -21.2651)
 
-[node name="FoodMenu1" parent="Props/FoodCourt" instance=ExtResource("13_vx3wj")]
+[node name="FoodMenu1" parent="Props/FoodCourt Props" instance=ExtResource("13_vx3wj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.625, 3.70675, 8.75791)
 
-[node name="FoodMenu2" parent="Props/FoodCourt" instance=ExtResource("13_vx3wj")]
+[node name="FoodMenu2" parent="Props/FoodCourt Props" instance=ExtResource("13_vx3wj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.625, 3.70675, -4.30055)
 
-[node name="FoodMenu3" parent="Props/FoodCourt" instance=ExtResource("13_vx3wj")]
+[node name="FoodMenu3" parent="Props/FoodCourt Props" instance=ExtResource("13_vx3wj")]
 transform = Transform3D(0.783043, 0, 0.621968, 0, 1, 0, -0.621968, 0, 0.783043, -39.4095, 3.70675, -20.5608)
 
-[node name="FoodTray" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.998254, 0, 0.0590625, 0, 1, 0, -0.0590625, 0, 0.998254, -14.123, 0.942569, 1.22487)
 
-[node name="FoodTray2" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray2" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.979895, -2.23453e-06, -0.199515, 0.000323834, 0.999999, 0.00157935, 0.199515, -0.00161222, 0.979894, -14.2636, 0.956127, -0.378027)
 
-[node name="FoodTray3" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray3" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.995266, 0, 0.0971834, 0, 1, 0, -0.0971834, 0, 0.995266, -14.8433, 0.942569, 1.19622)
 
-[node name="FoodTray4" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray4" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.994605, 0, -0.10373, 0, 1, 0, 0.10373, 0, 0.994605, -14.9785, 0.942569, -0.208379)
 
-[node name="FoodTray5" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray5" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1274, 0.941052, -0.0721464)
 
-[node name="FoodTray6" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray6" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.994665, 0, -0.103157, 0, 1, 0, 0.103157, 0, 0.994665, -15.2393, 0.942569, -4.49471)
 
-[node name="FoodTray7" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray7" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.991725, 0, -0.12838, 0, 1, 0, 0.12838, 0, 0.991725, -14.3801, 0.942569, -5.90833)
 
-[node name="FoodTray8" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray8" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(-0.410098, 0, -0.912041, 0, 1, 0, 0.912041, 0, -0.410098, -14.6976, 0.942569, -6.62036)
 
-[node name="FoodTray9" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray9" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.9909, 0.941052, -8.27202)
 
-[node name="FoodTray10" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray10" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.99905, 0, -0.0435671, 0, 1, 0, 0.0435671, 0, 0.99905, -17.5983, 0.941052, -5.44712)
 
-[node name="FoodTray11" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray11" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.999113, 0, 0.0421198, 0, 1, 0, -0.0421198, 0, 0.999113, -18.371, 0.941052, -5.4263)
 
-[node name="FoodTray12" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray12" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.997974, 0, 0.0636266, 0, 1, 0, -0.0636266, 0, 0.997974, -24.2974, 0.941052, -5.28688)
 
-[node name="FoodTray13" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray13" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.848473, 0, -0.529238, 0, 1, 0, 0.529238, 0, 0.848473, -21.2069, 0.941052, -5.50158)
 
-[node name="DrinkCup24" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup24" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1886, 0.941052, -5.54436)
 
-[node name="DrinkCup25" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup25" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1795, 0.942568, 0.781668)
 
-[node name="DrinkCup26" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup26" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9723, 0.942569, 0.721071)
 
-[node name="DrinkCup27" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup27" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6369, 0.942569, 0.0778053)
 
-[node name="DrinkCup28" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup28" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.314, 0.942569, -0.900945)
 
-[node name="FoodTray14" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray14" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.988581, 0, 0.150691, 0, 1, 0, -0.150691, 0, 0.988581, -17.6225, 0.941052, 6.16339)
 
-[node name="FoodTray15" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray15" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.995496, 0, -0.0948033, 0, 1, 0, 0.0948033, 0, 0.995496, -21.4583, 0.941052, 6.81692)
 
-[node name="FoodTray16" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray16" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.970038, 0, -0.242955, 0, 1, 0, 0.242955, 0, 0.970038, -14.1773, 0.942569, 5.83849)
 
-[node name="FoodTray17" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray17" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.997364, 0, 0.0725593, 0, 1, 0, -0.0725593, 0, 0.997364, -17.6446, 0.941052, 3.20537)
 
-[node name="FoodTray18" parent="Props/FoodCourt" instance=ExtResource("15_75bo5")]
+[node name="FoodTray18" parent="Props/FoodCourt Props" instance=ExtResource("15_75bo5")]
 transform = Transform3D(0.99718, 0, 0.0750483, 0, 1, 0, -0.0750483, 0, 0.99718, -18.412, 0.941052, 3.22067)
 
-[node name="DrinkCup29" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup29" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(0.960769, 0, -0.277348, 0, 1, 0, 0.277348, 0, 0.960769, -18.3951, 0.941052, 2.74426)
 
-[node name="DrinkCup30" parent="Props/FoodCourt" instance=ExtResource("14_ic8ei")]
+[node name="DrinkCup30" parent="Props/FoodCourt Props" instance=ExtResource("14_ic8ei")]
 transform = Transform3D(0.530511, 0, -0.847678, 0, 1, 0, 0.847678, 0, 0.530511, -17.8308, 0.941052, 2.73856)
 
-[node name="FoodMenu4" parent="Props/FoodCourt" instance=ExtResource("13_vx3wj")]
+[node name="FoodMenu4" parent="Props/FoodCourt Props" instance=ExtResource("13_vx3wj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13.9811, 3.54918, -6.50402)
 
-[node name="CashRegister5" parent="Props/FoodCourt" instance=ExtResource("12_1axcq")]
+[node name="CashRegister5" parent="Props/FoodCourt Props" instance=ExtResource("12_1axcq")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.50326, 0.853698, 0.785687)
 
-[node name="SodaFountain" parent="Props/FoodCourt" instance=ExtResource("16_fae7m")]
+[node name="SodaFountain" parent="Props/FoodCourt Props" instance=ExtResource("16_fae7m")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.14834, 0.929253, 3.46342)
 
-[node name="SodaFountain2" parent="Props/FoodCourt" instance=ExtResource("16_fae7m")]
+[node name="SodaFountain2" parent="Props/FoodCourt Props" instance=ExtResource("16_fae7m")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37.2959, 0.83724, -0.773167)
 
-[node name="SodaFountain3" parent="Props/FoodCourt" instance=ExtResource("16_fae7m")]
+[node name="SodaFountain3" parent="Props/FoodCourt Props" instance=ExtResource("16_fae7m")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -37.2959, 0.83724, -13.8048)
 
-[node name="SodaFountain4" parent="Props/FoodCourt" instance=ExtResource("16_fae7m")]
+[node name="SodaFountain4" parent="Props/FoodCourt Props" instance=ExtResource("16_fae7m")]
 transform = Transform3D(-0.766134, 0, -0.642681, 0, 1, 0, 0.642681, 0, -0.766134, -27.1676, 0.83724, -23.8011)
 mesh = SubResource("ArrayMesh_on2ww")
 
-[node name="Bench" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3, 0, 22.5)
 
-[node name="Bench2" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench2" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6, 0, 22.5)
 
-[node name="Bench5" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench5" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.5, 0, 16)
 
-[node name="Bench6" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench6" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.5, 0, 19)
 
-[node name="Bench7" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench7" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.5, 0, 16)
 
-[node name="Bench8" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench8" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.5, 0, 19)
 
-[node name="Bench3" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench3" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6, 0, 22.5)
 
-[node name="Bench4" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench4" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 22.5)
 
-[node name="TrashCan" parent="Props/FoodCourt" instance=ExtResource("20_sk58x")]
+[node name="TrashCan" parent="Props/FoodCourt Props" instance=ExtResource("20_sk58x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
 
-[node name="Map Display" parent="Props/FoodCourt" instance=ExtResource("21_oyfff")]
+[node name="Map Display" parent="Props/FoodCourt Props" instance=ExtResource("21_oyfff")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
 
-[node name="Bench9" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench9" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -90)
 
-[node name="Bench10" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench10" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -98)
 
-[node name="Bench11" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench11" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -90)
 
-[node name="Bench12" parent="Props/FoodCourt" instance=ExtResource("19_v07og")]
+[node name="Bench12" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -98)
 
-[node name="FoodCourtHallway" type="Node" parent="Props"]
+[node name="FoodCourtHallway Props" type="Node" parent="Props"]
 
-[node name="CFA" type="Node" parent="Props/FoodCourtHallway"]
+[node name="CFA Props" type="Node" parent="Props/FoodCourtHallway Props"]
 
-[node name="FoodTableSmall" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -43)
 
-[node name="FoodTableSmall2" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall2" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -43)
 
-[node name="FoodTableSmall3" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall3" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -46)
 
-[node name="FoodTableSmall4" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall4" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -46)
 
-[node name="FoodTableSmall5" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall5" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -29.5)
 
-[node name="FoodTableSmall6" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall6" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -29.5)
 
-[node name="FoodTableSmall9" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall9" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -26.5)
 
-[node name="FoodTableSmall10" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall10" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -26.5)
 
-[node name="FoodTableSmall7" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall7" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 13, 0, -32.5)
 
-[node name="FoodTableSmall8" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall8" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0, -32.5)
 
-[node name="FoodTableSmall11" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall11" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -29.5)
 
-[node name="FoodTableSmall12" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall12" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -29.5)
 
-[node name="FoodTableSmall13" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall13" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -26.5)
 
-[node name="FoodTableSmall14" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall14" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -26.5)
 
-[node name="FoodTableSmall15" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall15" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -32.5)
 
-[node name="FoodTableSmall16" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall16" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -32.5)
 
-[node name="FoodTableSmall17" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall17" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -38.5)
 
-[node name="FoodTableSmall18" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall18" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -38.5)
 
-[node name="FoodTableSmall19" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall19" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0, -35.5)
 
-[node name="FoodTableSmall20" parent="Props/FoodCourtHallway/CFA" instance=ExtResource("24_5l7bw")]
+[node name="FoodTableSmall20" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_5l7bw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23, 0, -35.5)
+
+[node name="FoodTableBig" parent="Props/FoodCourtHallway Props/CFA Props" instance=ExtResource("24_sdn65")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0, -26.5)
+
+[node name="Lenscraft Props" type="Node" parent="Props"]
+
+[node name="Table2" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -217)
+
+[node name="Chair2" parent="Props/Lenscraft Props/Table2" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 0.482971, 0, -1.32941)
+
+[node name="Chair4" parent="Props/Lenscraft Props/Table2" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.857178, 0, -1.13449)
+
+[node name="Chair3" parent="Props/Lenscraft Props/Table2" instance=ExtResource("25_oocf2")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 0.800003)
+
+[node name="Table3" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -217)
+
+[node name="Chair2" parent="Props/Lenscraft Props/Table3" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.482971, 0, -1.12941)
+
+[node name="Chair4" parent="Props/Lenscraft Props/Table3" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.657177, 0, -1.13449)
+
+[node name="Chair3" parent="Props/Lenscraft Props/Table3" instance=ExtResource("25_oocf2")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 0.5)
+
+[node name="Table4" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -211)
+
+[node name="Chair2" parent="Props/Lenscraft Props/Table4" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.882973, 0, -1.12941)
+
+[node name="Chair4" parent="Props/Lenscraft Props/Table4" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.657177, 0, -1.13449)
+
+[node name="Chair3" parent="Props/Lenscraft Props/Table4" instance=ExtResource("25_oocf2")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 1.39999)
+
+[node name="Table5" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -211)
+
+[node name="Chair4" parent="Props/Lenscraft Props/Table5" instance=ExtResource("25_oocf2")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.157177, 0, -0.634491)
+
+[node name="Chair3" parent="Props/Lenscraft Props/Table5" instance=ExtResource("25_oocf2")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 1)
+
+[node name="Chair2" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -213)
+
+[node name="Chair6" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, -224)
+
+[node name="Chair7" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64, 0, -221.4)
+
+[node name="Chair3" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -213)
+
+[node name="Chair4" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -213)
+
+[node name="Chair5" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.6, 0, -225.3)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

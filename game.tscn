@@ -238,6 +238,14 @@ text = "I don't remember a lot about the hallways that connect the main areas to
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -51.258)
 text = "I remember the area near the Chick Fil-A opening up to a large area. I don't know if that means that the Chick Fil-A is next to the big hub area, but it's the only thing that makes sense from my memories. Maybe there's a second hub area?"
 
+[node name="SouthHallway2" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7761, -1.90735e-06, -95.258)
+text = "I remember a long hallway like this leading to a big store like Dillards? It had glass windows on either side of the walls which may have been stores, but I don't remember."
+
+[node name="SouthHallway3" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.7761, -1.90735e-06, -94.258)
+text = "I know that there's a Dillards somewhere in the mall. Maybe it was here? I don't remember anything about it."
+
 [node name="Hub" type="Node" parent="InfoAreas"]
 
 [node name="Hub1" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
@@ -349,6 +357,10 @@ text = "The board that you look at while sitting down is reflected a couple of t
 [node name="PlaygroundHub1" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -240)
 text = "I remember this area always being closed down."
+
+[node name="PlaygroundHub2" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -212)
+text = "There was this small playground area. It had many food-themed plastic obstacles that kids could run around and climb on, I guess. Either this is in the wrong location or they removed it at some point beacuse I feel like it goes here but I don't really remember seeing it here that much."
 
 [node name="Props" type="Node" parent="."]
 

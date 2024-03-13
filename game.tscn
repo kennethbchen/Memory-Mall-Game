@@ -324,6 +324,18 @@ text = "There's another entrance into the mall here. I remember using this one a
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -217)
 text = "This was a Lenscrafters. I've had poor eyesight all my life, so I remember coming here often to get new glasses. I think a couple of years ago, they closed or relocated somewhere else."
 
+[node name="Lenscraft9" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -242)
+text = "This was a Sunglass Hut. Never went in here."
+
+[node name="Lenscraft10" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -218)
+text = "This was a Books A Million. I've been in it sometimes."
+
+[node name="Lenscraft11" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -254)
+text = "This is another one of the \"Big Stores\". I think it was the JC Penny. I don't remember any of it."
+
 [node name="Lenscraft2" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -217)
 text = "They had these seating areas where you would test out glasses and talk to someone at the store."

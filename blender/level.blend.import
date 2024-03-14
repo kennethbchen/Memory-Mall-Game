@@ -50,6 +50,10 @@ _subresources={
 "Outline_2": {
 "use_external/enabled": true,
 "use_external/path": "res://materials/wiggle_outline_material_2.tres"
+},
+"Outline_3": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/wiggle_outline_material_3.tres"
 }
 },
 "meshes": {

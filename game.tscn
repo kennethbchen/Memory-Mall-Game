@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=36 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://dgc8n1iwbmtlw" path="res://scenes/food_table_big.tscn" id="24_sdn65"]
 [ext_resource type="PackedScene" uid="uid://yrhp66o46184" path="res://imported_assets/Table2.tscn" id="25_neuuv"]
 [ext_resource type="PackedScene" uid="uid://dgwyfdkqytb0u" path="res://imported_assets/Chair2.tscn" id="25_oocf2"]
+[ext_resource type="PackedScene" uid="uid://d08n8kqpq1xgm" path="res://imported_assets/CoinFunnel.tscn" id="27_4lmcb"]
+[ext_resource type="PackedScene" uid="uid://cfsycxgqj53ag" path="res://imported_assets/FoldingCanopy.tscn" id="28_53kup"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -231,7 +233,7 @@ text = "I think these were bathrooms."
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -35)
 
 [node name="NorthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -135.258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -148.258)
 text = "I don't remember a lot about the hallways that connect the main areas together. There's an Abercrombie & Fitch that I got clothes from one time. I also remember there being a Lids store which sold headwear."
 
 [node name="SouthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
@@ -373,6 +375,8 @@ text = "I remember this area always being closed down."
 [node name="PlaygroundHub2" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -212)
 text = "There was this small playground area. It had many food-themed plastic obstacles that kids could run around and climb on, I guess. Either this is in the wrong location or they removed it at some point beacuse I feel like it goes here but I don't really remember seeing it here that much."
+
+[node name="Hub2" type="Node" parent="InfoAreas"]
 
 [node name="Props" type="Node" parent="."]
 
@@ -1057,6 +1061,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -213)
 [node name="Chair5" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.6, 0, -225.3)
 
+[node name="HubProps" type="Node" parent="Props"]
+
+[node name="CoinFunnel" parent="Props/HubProps" instance=ExtResource("27_4lmcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -126)
+
+[node name="SearsProps" type="Node" parent="Props"]
+
+[node name="FoldingCanopy" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 158, 0.2, -142)
+
+[node name="FoldingCanopy2" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 158, 0.2, -154)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("BoxMesh_xf85q")
+
+[node name="InfoArea" parent="." instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
+text = "It's not a real mall unless they have these coin funnel things."

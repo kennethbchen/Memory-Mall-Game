@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=37 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://dgwyfdkqytb0u" path="res://imported_assets/Chair2.tscn" id="25_oocf2"]
 [ext_resource type="PackedScene" uid="uid://d08n8kqpq1xgm" path="res://imported_assets/CoinFunnel.tscn" id="27_4lmcb"]
 [ext_resource type="PackedScene" uid="uid://cfsycxgqj53ag" path="res://imported_assets/FoldingCanopy.tscn" id="28_53kup"]
+[ext_resource type="PackedScene" uid="uid://d1axhx6jrrhxb" path="res://imported_assets/CampingTent.tscn" id="29_vlmk8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -1071,9 +1072,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -126)
 [node name="FoldingCanopy" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 158, 0.2, -142)
 
-[node name="FoldingCanopy2" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 158, 0.2, -154)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("BoxMesh_xf85q")
@@ -1081,3 +1079,6 @@ mesh = SubResource("BoxMesh_xf85q")
 [node name="InfoArea" parent="." instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
 text = "It's not a real mall unless they have these coin funnel things."
+
+[node name="CampingTent" parent="." instance=ExtResource("29_vlmk8")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 159, 0.2, -154)

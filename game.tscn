@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=39 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://d08n8kqpq1xgm" path="res://imported_assets/CoinFunnel.tscn" id="27_4lmcb"]
 [ext_resource type="PackedScene" uid="uid://cfsycxgqj53ag" path="res://imported_assets/FoldingCanopy.tscn" id="28_53kup"]
 [ext_resource type="PackedScene" uid="uid://d1axhx6jrrhxb" path="res://imported_assets/CampingTent.tscn" id="29_vlmk8"]
+[ext_resource type="PackedScene" uid="uid://dowrirk83pd1m" path="res://imported_assets/OutsideTable.tscn" id="30_4nxvu"]
+[ext_resource type="PackedScene" uid="uid://d06fdxsvfih1j" path="res://imported_assets/OutsideChair.tscn" id="31_mtxll"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -1069,6 +1071,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -126)
 
 [node name="SearsProps" type="Node" parent="Props"]
 
+[node name="CampingTent" parent="Props/SearsProps" instance=ExtResource("29_vlmk8")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 159, 0.2, -154)
+
+[node name="OutsideTable" parent="Props/SearsProps" instance=ExtResource("30_4nxvu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 0, -149)
+
+[node name="OutsideChair" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(-0.707107, 0, -0.707106, 0, 1, 0, 0.707106, 0, -0.707107, 151.9, 0.1, -148)
+
+[node name="OutsideChair2" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 151.7, 0.1, -150.1)
+
+[node name="OutsideTable2" parent="Props/SearsProps" instance=ExtResource("30_4nxvu")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 151.133, 0, -139.387)
+
+[node name="OutsideChair3" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 151.362, 0.1, -138.043)
+
+[node name="OutsideChair6" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 149.762, 0.1, -139.043)
+
+[node name="OutsideChair4" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 152.405, 0.1, -139.67)
+
+[node name="OutsideChair5" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(1, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 1, 150.905, 0.1, -140.77)
+
 [node name="FoldingCanopy" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 158, 0.2, -142)
 
@@ -1079,6 +1108,3 @@ mesh = SubResource("BoxMesh_xf85q")
 [node name="InfoArea" parent="." instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
 text = "It's not a real mall unless they have these coin funnel things."
-
-[node name="CampingTent" parent="." instance=ExtResource("29_vlmk8")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 159, 0.2, -154)

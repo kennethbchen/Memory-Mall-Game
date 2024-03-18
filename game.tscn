@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=40 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://d1axhx6jrrhxb" path="res://imported_assets/CampingTent.tscn" id="29_vlmk8"]
 [ext_resource type="PackedScene" uid="uid://dowrirk83pd1m" path="res://imported_assets/OutsideTable.tscn" id="30_4nxvu"]
 [ext_resource type="PackedScene" uid="uid://d06fdxsvfih1j" path="res://imported_assets/OutsideChair.tscn" id="31_mtxll"]
+[ext_resource type="PackedScene" uid="uid://bduygvyqb7ys6" path="res://imported_assets/OutsideChair2.tscn" id="32_5gttj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -1073,6 +1074,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -126)
 
 [node name="CampingTent" parent="Props/SearsProps" instance=ExtResource("29_vlmk8")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 159, 0.2, -154)
+
+[node name="OutsideChair7" parent="Props/SearsProps" instance=ExtResource("32_5gttj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152, 0.1, -155)
+
+[node name="OutsideChair8" parent="Props/SearsProps" instance=ExtResource("32_5gttj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152, 0.1, -157)
+
+[node name="OutsideChair9" parent="Props/SearsProps" instance=ExtResource("32_5gttj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152, 0.1, -159)
 
 [node name="OutsideTable" parent="Props/SearsProps" instance=ExtResource("30_4nxvu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 0, -149)

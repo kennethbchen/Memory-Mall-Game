@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://do4njv4w62cnl"]
 
-[ext_resource type="Texture2D" uid="uid://du5vavrxc2ek" path="res://textures/assets/food_menu_1.png" id="1_w2hn5"]
-[ext_resource type="Material" uid="uid://bbehum30eg4ey" path="res://materials/wiggle_outline_material_2.tres" id="2_28mnb"]
+[ext_resource type="Texture2D" uid="uid://du5vavrxc2ek" path="res://textures/assets/food_menu_1.png" id="1_jn4co"]
+[ext_resource type="Material" uid="uid://bbehum30eg4ey" path="res://materials/wiggle_outline_material_2.tres" id="2_ygs1l"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ymjj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_heuia"]
 resource_name = "FoodMenu"
 cull_mode = 2
-albedo_texture = ExtResource("1_w2hn5")
+albedo_texture = ExtResource("1_jn4co")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_hi70k"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_x0i1a"]
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 9.00001, 3.00001, 1.00001),
 "format": 34896613377,
@@ -32,7 +32,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_08pb3"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_snx31"]
 resource_name = "MainScene_Cube_004"
 _surfaces = [{
 "aabb": AABB(0, 0, 0, 9.00001, 3.00001, 1.00001),
@@ -40,7 +40,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 24,
 "index_data": PackedByteArray(2, 0, 5, 0, 8, 0, 12, 0, 9, 0, 15, 0, 3, 0, 17, 0, 7, 0, 3, 0, 13, 0, 17, 0, 4, 0, 11, 0, 14, 0, 4, 0, 1, 0, 11, 0, 16, 0, 0, 0, 6, 0, 16, 0, 10, 0, 0, 0),
-"material": SubResource("StandardMaterial3D_5ymjj"),
+"material": SubResource("StandardMaterial3D_heuia"),
 "name": "FoodMenu",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -52,7 +52,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 24,
 "index_data": PackedByteArray(0, 0, 6, 0, 3, 0, 12, 0, 14, 0, 10, 0, 4, 0, 15, 0, 11, 0, 4, 0, 5, 0, 15, 0, 4, 0, 9, 0, 1, 0, 4, 0, 11, 0, 9, 0, 13, 0, 2, 0, 8, 0, 13, 0, 7, 0, 2, 0),
-"material": ExtResource("2_28mnb"),
+"material": ExtResource("2_ygs1l"),
 "name": "Outline_2",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -60,8 +60,8 @@ _surfaces = [{
 "vertex_data": PackedByteArray(254, 255, 232, 255, 254, 255, 126, 222, 254, 255, 232, 255, 254, 255, 191, 231, 254, 255, 232, 255, 254, 255, 191, 231, 254, 255, 255, 255, 0, 0, 66, 192, 254, 255, 255, 255, 0, 0, 62, 168, 254, 255, 0, 0, 205, 0, 50, 189, 254, 255, 0, 0, 205, 0, 70, 232, 254, 255, 0, 0, 205, 0, 50, 189, 0, 0, 232, 255, 254, 255, 191, 231, 0, 0, 232, 255, 254, 255, 191, 231, 0, 0, 232, 255, 254, 255, 126, 222, 0, 0, 255, 255, 0, 0, 62, 168, 0, 0, 255, 255, 0, 0, 66, 192, 0, 0, 0, 0, 205, 0, 50, 189, 0, 0, 0, 0, 205, 0, 70, 232, 0, 0, 0, 0, 205, 0, 50, 189, 140, 61, 30, 183, 6, 37, 6, 137, 6, 37, 6, 137, 196, 72, 72, 135, 154, 66, 24, 175, 29, 229, 193, 177, 122, 117, 143, 184, 29, 229, 193, 177, 6, 9, 249, 90, 6, 9, 249, 90, 30, 55, 114, 66, 24, 47, 100, 61, 73, 7, 58, 55, 60, 206, 29, 101, 143, 56, 133, 10, 60, 206, 29, 101)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_hi70k")
+shadow_mesh = SubResource("ArrayMesh_x0i1a")
 
 [node name="FoodMenu1" type="MeshInstance3D"]
-mesh = SubResource("ArrayMesh_08pb3")
+mesh = SubResource("ArrayMesh_snx31")
 skeleton = NodePath("")

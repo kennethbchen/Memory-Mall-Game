@@ -325,7 +325,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.517, 3.17487, -166.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.517, 3.17487, -96.066)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -338,7 +338,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.517, 2.52487, -166.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.517, 2.52487, -96.066)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -349,6 +349,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_41jpt")
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
+metadata/_edit_lock_ = true
 
 [node name="InfoAreas" type="Node" parent="."]
 
@@ -372,7 +373,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1035, -1.90735e-06, -39.09
 text = "I distinctly remember the shape of this Chick-Fil-A. This is probably the first Chick-Fil-A that I've ever been to. I think I remember the walls were yellow and the floor was a laminate wood floor."
 
 [node name="CFA2" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.8737, -1.90735e-06, -29.6442)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8737, -1.90735e-06, -40.9442)
 text = "I think these were bathrooms."
 
 [node name="TrashCan" parent="InfoAreas/FoodCourt/ChickFilA" instance=ExtResource("20_sk58x")]
@@ -384,7 +385,7 @@ text = "I don't remember a lot about the hallways that connect the main areas to
 
 [node name="SouthHallway1" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -51.258)
-text = "I remember the area near the Chick Fil-A opening up to a large area. I don't know if that means that the Chick Fil-A is next to the big hub area, but it's the only thing that makes sense from my memories. Maybe there's a second hub area?"
+text = "I remember the area near the Chick Fil-A opening up to a large area. I think that it opens up to what I'm calling the second hub area."
 
 [node name="SouthHallway2" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7761, -1.90735e-06, -95.258)
@@ -394,122 +395,122 @@ text = "I remember a long hallway like this leading to a big store like Dillards
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.7761, -1.90735e-06, -94.258)
 text = "I know that there's a Dillards somewhere in the mall. Maybe it was here? I don't remember anything about it."
 
-[node name="Hub" type="Node" parent="InfoAreas"]
+[node name="Hub1" type="Node" parent="InfoAreas"]
 
-[node name="Hub1" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -71.1731)
+[node name="Hub1_1" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -201.973)
 text = "This is what I see as the central hub area of the mall. It always had this trampoline ride thing where you would put on a harness which would allow you to jump very high and do flips. "
 
-[node name="Hub2" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2569, -9.53676e-07, -64.041)
+[node name="Hub1_2" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2569, -9.53676e-07, -194.841)
 text = "I loved going to this GameStop as a kid. My family wouldn't really go out of the way to go to a GameStop, but we sometimes stopped by this one when we visited the mall. I played a lot of games as a kid."
 
-[node name="Hub3" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.2056, 0.299998, -94.038)
+[node name="Hub1_3" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.2056, 0.299998, -224.838)
 text = "There's a row of massage chairs here."
 
-[node name="Hub6" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.2056, 0.299998, -94.038)
+[node name="Hub1_6" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.2056, 0.299998, -224.838)
 text = "This is probably where Sears was. It's at least one of the three big stores I remember in the mall (Sears, JC Penny, and Dillards). I haven't been to any of them in a long time."
 
-[node name="Hub5" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2056, 0.299998, -86.038)
+[node name="Hub1_5" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2056, 0.299998, -216.838)
 text = "I remember these huge plant pots that were in various places around the mall."
 
-[node name="Hub7" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2056, 0.299998, -81.038)
+[node name="Hub1_7" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.2056, 0.299998, -211.838)
 text = "There are probably stores along these walls, but I don't remember them at all."
 
-[node name="Hub4" parent="InfoAreas/Hub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2056, -1.90735e-06, -94.638)
+[node name="Hub1_4" parent="InfoAreas/Hub1" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2056, -1.90735e-06, -225.438)
 text = "There's a fountain here. I've never seen it actually working, though."
 
 [node name="Sears" type="Node" parent="InfoAreas"]
 
 [node name="Sears1" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180, 0, -94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.4, 0, -224)
 text = "This is another entrance to the mall. I think that this is the one that my family used the most. I remember making many long treks across Sears."
 
 [node name="Sears2" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 165.6, 0, -100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 0, -230)
 text = "I feel like being brought along to a clothing store and seeing the many, many rows of clothes is a common childhood experience. I remember wandering around areas like this and weaving in and out of the clothes like bushes in the wilderness."
 
 [node name="Sears4" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.6, 0.3, -123)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 0.3, -253)
 text = "This was the entrance to the part of Sears where they sold many things other than clothes."
 
 [node name="Sears3" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.1, 0, -112)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 0, -242)
 text = "I remember standing in the middle of these rings of clothes and just hiding there."
 
 [node name="Sears5" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.1, 0, -150)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.5, 0, -280)
 text = "This area is dedicated to outdoor home equipment like tents, chairs, and lights."
 
 [node name="Sears6" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.1, 0, -181)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.5, 0, -311)
 text = "This part had smaller electronic appliances like coffee makers and microwaves."
 
 [node name="Sears7" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.1, 0, -181)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.5, 0, -311)
 text = "This area had larger electronic appliances like washing machines, drying machines, and ovens."
 
 [node name="Sears9" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.1, 0, -148)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, 0, -278)
 text = "I have no clue what this area had."
 
 [node name="Sears8" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.1, 0.2, -233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, 0.2, -363)
 text = "This place had a lot of tools and other home improvement type stuff.  I remember coming to this place with my dad when he needed to buy new tools."
 
 [node name="Sears10" parent="InfoAreas/Sears" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.1, 0, -279)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, 0, -409)
 text = "There's another entrance into the mall here. I remember using this one a small handful of times."
 
 [node name="Lenscraft" type="Node" parent="InfoAreas"]
 
 [node name="Lenscraft1" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -217)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152.8, 0, -74.9182)
 text = "This was a Lenscrafters. I've had poor eyesight all my life, so I remember coming here often to get new glasses. I think a couple of years ago, they closed or relocated somewhere else."
 
 [node name="Lenscraft9" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -242)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 172.8, 0, -74.9182)
 text = "This was a Sunglass Hut. Never went in here."
 
 [node name="Lenscraft10" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -218)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 148.8, 0, -112.918)
 text = "This was a Books A Million. I've been in it sometimes."
 
 [node name="Lenscraft11" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -254)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 184.8, 0, -93.9182)
 text = "This is another one of the \"Big Stores\". I think it was the JC Penny. I don't remember any of it."
 
 [node name="Lenscraft2" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -217)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 147.8, 0, -65.9182)
 text = "They had these seating areas where you would test out glasses and talk to someone at the store."
 
 [node name="Lenscraft4" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, -225)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 155.8, 0, -56.9182)
 text = "There were rows and rows of different glasses frames on display."
 
 [node name="Lenscraft3" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, -215)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 145.8, 0, -38.9182)
 text = "This area was where they did testing on your eye health. They had the machine that would blow air into your eyes and the one where you would focus on an image of a house."
 
 [node name="Lenscraft6" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.4, 0, -219)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 149.8, 0, -31.5182)
 text = "This was an office space. I think I only ever saw it once."
 
 [node name="Lenscraft7" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.4, 0, -211)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 141.8, 0, -27.5182)
 text = "I don't remember seeing the inside of any of these rooms."
 
 [node name="Lenscraft5" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4, 0, -218.9)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 149.7, 0, -22.5182)
 text = "This is where you would do the vision test with the eye doctor to figure out your prescription. I don't think that I've ever been afraid of doing this vision test, unlike how I've heard others talk about it."
 
 [node name="Lenscraft8" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.4, 0, -223.9)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 154.7, 0, -20.5182)
 text = "The board that you look at while sitting down is reflected a couple of times in mirrors around the room. Most likely to get the right distance for the test."
 
 [node name="PlaygroundHub" type="Node" parent="InfoAreas"]
@@ -523,6 +524,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -212)
 text = "There was this small playground area. It had many food-themed plastic obstacles that kids could run around and climb on, I guess. Either this is in the wrong location or they removed it at some point beacuse I feel like it goes here but I don't really remember seeing it here that much."
 
 [node name="Hub2" type="Node" parent="InfoAreas"]
+
+[node name="Hub2_1" parent="InfoAreas/Hub2" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -94)
+text = "I remember there being at least one hallway that had a bunch of coin operated things like claw machines and rocking horse things. I also remember it being quite dark for some reason. I'm calling this the \"coin hallway\"."
 
 [node name="Props" type="Node" parent="."]
 
@@ -1155,16 +1160,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -60.0386)
 
 [node name="Bench9" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -90)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -221)
 
 [node name="Bench10" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -98)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 0, -229)
 
 [node name="Bench11" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -90)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -221)
 
 [node name="Bench12" parent="Props/FoodCourt Props" instance=ExtResource("19_v07og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -98)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -229)
 
 [node name="FoodCourtHallway Props" type="Node" parent="Props"]
 
@@ -1236,7 +1241,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 
 [node name="Lenscraft Props" type="Node" parent="Props"]
 
 [node name="Table2" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -217)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 142, 0, -63)
 
 [node name="Chair2" parent="Props/Lenscraft Props/Table2" instance=ExtResource("25_oocf2")]
 transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 0.482971, 0, -1.32941)
@@ -1248,7 +1253,7 @@ transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 0.800003)
 
 [node name="Table3" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -217)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 142, 0, -71)
 
 [node name="Chair2" parent="Props/Lenscraft Props/Table3" instance=ExtResource("25_oocf2")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.482971, 0, -1.12941)
@@ -1260,7 +1265,7 @@ transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 0.5)
 
 [node name="Table4" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -211)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 148, 0, -71)
 
 [node name="Chair2" parent="Props/Lenscraft Props/Table4" instance=ExtResource("25_oocf2")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.882973, 0, -1.12941)
@@ -1272,7 +1277,7 @@ transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 1.39999)
 
 [node name="Table5" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -211)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 148, 0, -63)
 
 [node name="Chair4" parent="Props/Lenscraft Props/Table5" instance=ExtResource("25_oocf2")]
 transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.157177, 0, -0.634491)
@@ -1281,22 +1286,22 @@ transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 
 transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 1)
 
 [node name="Chair2" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 0, -213)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.817, 0, -36.0833)
 
 [node name="Chair6" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64, 0, -224)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 154.817, 0, -30.0833)
 
 [node name="Chair7" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64, 0, -221.4)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 152.217, 0, -30.0833)
 
 [node name="Chair3" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, -213)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.817, 0, -38.0833)
 
 [node name="Chair4" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, -213)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.817, 0, -40.0833)
 
 [node name="Chair5" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.6, 0, -225.3)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 156.117, 0, -23.4833)
 
 [node name="HubProps" type="Node" parent="Props"]
 
@@ -1306,43 +1311,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -126)
 [node name="SearsProps" type="Node" parent="Props"]
 
 [node name="CampingTent" parent="Props/SearsProps" instance=ExtResource("29_vlmk8")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 159, 0.2, -154)
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 160, 0.2, -285)
 
 [node name="OutsideChair7" parent="Props/SearsProps" instance=ExtResource("32_5gttj")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152, 0.1, -155)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153, 0.1, -286)
 
 [node name="OutsideChair8" parent="Props/SearsProps" instance=ExtResource("32_5gttj")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152, 0.1, -157)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153, 0.1, -288)
 
 [node name="OutsideChair9" parent="Props/SearsProps" instance=ExtResource("32_5gttj")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152, 0.1, -159)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153, 0.1, -290)
 
 [node name="OutsideTable" parent="Props/SearsProps" instance=ExtResource("30_4nxvu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 0, -149)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 152, 0, -280)
 
 [node name="OutsideChair" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
-transform = Transform3D(-0.707107, 0, -0.707106, 0, 1, 0, 0.707106, 0, -0.707107, 151.9, 0.1, -148)
+transform = Transform3D(-0.707107, 0, -0.707106, 0, 1, 0, 0.707106, 0, -0.707107, 152.9, 0.1, -279)
 
 [node name="OutsideChair2" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 151.7, 0.1, -150.1)
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 152.7, 0.1, -281.1)
 
 [node name="OutsideTable2" parent="Props/SearsProps" instance=ExtResource("30_4nxvu")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 151.133, 0, -139.387)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 152.133, 0, -270.387)
 
 [node name="OutsideChair3" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
-transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 151.362, 0.1, -138.043)
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 152.362, 0.1, -269.043)
 
 [node name="OutsideChair6" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
-transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 149.762, 0.1, -139.043)
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 150.762, 0.1, -270.043)
 
 [node name="OutsideChair4" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 152.405, 0.1, -139.67)
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 153.405, 0.1, -270.67)
 
 [node name="OutsideChair5" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
-transform = Transform3D(1, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 1, 150.905, 0.1, -140.77)
+transform = Transform3D(1, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 1, 151.905, 0.1, -271.77)
 
 [node name="FoldingCanopy" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 158, 0.2, -142)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 159, 0.2, -273)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -1353,4 +1358,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
 text = "It's not a real mall unless they have these coin funnel things."
 
 [node name="ClawMachine" parent="." instance=ExtResource("36_re1ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.1, -169)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0.1, -94)

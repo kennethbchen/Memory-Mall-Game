@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=54 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://d06fdxsvfih1j" path="res://imported_assets/OutsideChair.tscn" id="31_mtxll"]
 [ext_resource type="PackedScene" uid="uid://bduygvyqb7ys6" path="res://imported_assets/OutsideChair2.tscn" id="32_5gttj"]
 [ext_resource type="PackedScene" uid="uid://bs4nrql84dm0s" path="res://imported_assets/ClawMachine.tscn" id="36_re1ou"]
+[ext_resource type="PackedScene" uid="uid://b2ki2ir1to63v" path="res://imported_assets/HurricaneSim.tscn" id="37_tbv34"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xiae6"]
 sky_top_color = Color(0.811765, 0.356863, 0.682353, 1)
@@ -527,6 +528,16 @@ text = "There was this small playground area. It had many food-themed plastic ob
 [node name="Hub2_1" parent="InfoAreas/Hub2" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, -94)
 text = "I remember there being at least one hallway that had a bunch of coin operated things like claw machines and rocking horse things. I also remember it being quite dark for some reason. I'm calling this the \"coin hallway\"."
+
+[node name="Hub2_2" parent="InfoAreas/Hub2" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
+text = "It's not a real mall unless they have these coin funnel things."
+
+[node name="CoinHallway" type="Node" parent="InfoAreas"]
+
+[node name="CoinHallway1" parent="InfoAreas/CoinHallway" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0.3, -94)
+text = "There was this hurricane simulator thing. You stand in this chamber and it would blow air at you to simulate a hurricane. I don't think I ever tried this."
 
 [node name="Props" type="Node" parent="."]
 
@@ -1348,13 +1359,14 @@ transform = Transform3D(1, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 1, 151.905,
 [node name="FoldingCanopy" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 159, 0.2, -273)
 
+[node name="CoinHallwayProps" type="Node" parent="Props"]
+
+[node name="ClawMachine" parent="Props/CoinHallwayProps" instance=ExtResource("36_re1ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0.1, -94)
+
+[node name="HurricaneSim" parent="Props/CoinHallwayProps" instance=ExtResource("37_tbv34")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 55, 0.2, -94)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("BoxMesh_xf85q")
-
-[node name="InfoArea" parent="." instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
-text = "It's not a real mall unless they have these coin funnel things."
-
-[node name="ClawMachine" parent="." instance=ExtResource("36_re1ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0.1, -94)

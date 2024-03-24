@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody3D
 
 @export var camera: Camera3D
@@ -6,6 +7,8 @@ extends CharacterBody3D
 @export var run_speed: float = 8
 
 var input_direction: Vector2
+
+var moving: bool = false
 
 var relative_input_direction: Vector3:
 	get:
@@ -49,6 +52,11 @@ func _physics_process(delta):
 	var move_vel = relative_input_direction * (run_speed if running else speed)
 	velocity.x = move_vel.x
 	velocity.z = move_vel.z
+	
+	if move_vel.length() > 0:
+		moving = true
+	else:
+		moving = false
 
 	# Gravity
 	if not is_on_floor():

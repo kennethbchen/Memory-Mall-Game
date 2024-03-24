@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://xdyu47f6bedw"]
+[gd_scene load_steps=65 format=3 uid="uid://xdyu47f6bedw"]
 
 [ext_resource type="Script" path="res://scripts/orbit_camera_controller.gd" id="1_20s52"]
 [ext_resource type="Script" path="res://scripts/debug_commands.gd" id="1_ql8j7"]
@@ -9,17 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://bjlsiybcsefkc" path="res://textures/text_box_9_slice.png" id="4_23e4b"]
 [ext_resource type="PackedScene" uid="uid://orog4etuspw7" path="res://scenes/info_area.tscn" id="5_dp3gq"]
 [ext_resource type="PackedScene" uid="uid://bllxhb6p4l8cc" path="res://blender/level.blend" id="5_y5eys"]
+[ext_resource type="Script" path="res://footstep_controller.gd" id="8_xpka8"]
+[ext_resource type="AudioStream" uid="uid://bvxkiu5xecnro" path="res://audio/footsteps.wav" id="8_yvhpo"]
 [ext_resource type="PackedScene" uid="uid://6rqwek6jj16o" path="res://imported_assets/Chair.tscn" id="9_3ecrn"]
+[ext_resource type="Script" path="res://addons/soundeffectcontroller/sound_effect_controller/sound_effect_controller.gd" id="9_i6cld"]
+[ext_resource type="AudioStream" uid="uid://du0nxd23qyisi" path="res://audio/footsteps/footstep1.wav" id="10_2i30v"]
 [ext_resource type="PackedScene" uid="uid://bbr6gwmle6gvh" path="res://imported_assets/Table.tscn" id="10_4xvtv"]
+[ext_resource type="AudioStream" uid="uid://c3ayvkcuyvx5y" path="res://audio/footsteps/footstep2.wav" id="11_25sqn"]
 [ext_resource type="PackedScene" uid="uid://do4njv4w62cnl" path="res://imported_assets/FoodMenu1.tscn" id="11_q2b5p"]
 [ext_resource type="PackedScene" uid="uid://dklfirnq3jpaw" path="res://imported_assets/CashRegister.tscn" id="12_1axcq"]
 [ext_resource type="Texture2D" uid="uid://d32fgjt8gd8hs" path="res://textures/assets/table.png" id="12_gyoor"]
+[ext_resource type="AudioStream" uid="uid://h5mbeewtl4kx" path="res://audio/footsteps/footstep3.wav" id="13_tnr70"]
 [ext_resource type="PackedScene" uid="uid://bv0v2uc8m6jk4" path="res://imported_assets/FoodMenu2.tscn" id="13_vx3wj"]
+[ext_resource type="AudioStream" uid="uid://17yvfo7d06lv" path="res://audio/footsteps/footstep4.wav" id="14_66nyd"]
 [ext_resource type="Texture2D" uid="uid://qjciugpolcky" path="res://textures/assets/chair.png" id="14_b6o42"]
 [ext_resource type="PackedScene" uid="uid://bic21pf8ruusv" path="res://imported_assets/DrinkCup.tscn" id="14_ic8ei"]
+[ext_resource type="AudioStream" uid="uid://ckjm0taagxqwr" path="res://audio/footsteps/footstep5.wav" id="15_6dpeq"]
 [ext_resource type="PackedScene" uid="uid://c4v5rgoexbu37" path="res://imported_assets/FoodTray.tscn" id="15_75bo5"]
 [ext_resource type="PackedScene" uid="uid://dq12615qnjfn8" path="res://imported_assets/SodaFountain.tscn" id="16_fae7m"]
+[ext_resource type="AudioStream" uid="uid://bgakdgmlravi7" path="res://audio/footsteps/footstep6.wav" id="16_rvcwg"]
 [ext_resource type="Material" uid="uid://dsah6htlfr471" path="res://materials/asset_material.tres" id="17_36kfu"]
+[ext_resource type="Script" path="res://addons/soundeffectcontroller/sound_effect.gd" id="17_gdexg"]
 [ext_resource type="Texture2D" uid="uid://du5vavrxc2ek" path="res://textures/assets/food_menu_1.png" id="17_y0w6u"]
 [ext_resource type="Material" uid="uid://bbehum30eg4ey" path="res://materials/wiggle_outline_material_2.tres" id="18_s2pqo"]
 [ext_resource type="PackedScene" uid="uid://dl71qklnykyhd" path="res://imported_assets/Bench.tscn" id="19_v07og"]
@@ -59,6 +69,11 @@ tonemap_exposure = 1.48
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41jpt"]
 height = 1.6
+
+[sub_resource type="Resource" id="Resource_nou5w"]
+script = ExtResource("17_gdexg")
+name = "footstep"
+audio_clips = Array[AudioStream]([ExtResource("10_2i30v"), ExtResource("11_25sqn"), ExtResource("13_tnr70"), ExtResource("14_66nyd"), ExtResource("15_6dpeq"), ExtResource("16_rvcwg")])
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvw7y"]
 resource_name = "Table"
@@ -260,6 +275,10 @@ shadow_mesh = SubResource("ArrayMesh_y5eis")
 
 [node name="Game" type="Node3D"]
 
+[node name="FootstepTest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yvhpo")
+bus = &"Reverb"
+
 [node name="DebugCommands" type="Node" parent="."]
 script = ExtResource("1_ql8j7")
 
@@ -345,9 +364,19 @@ script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
 run_speed = 20.0
 
+[node name="FootstepController" type="Node" parent="Player" node_paths=PackedStringArray("sfx_controller")]
+script = ExtResource("8_xpka8")
+footstep_interval_sec = 0.75
+sfx_controller = NodePath("../SoundEffectController")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0.000645772, 0, -0.000645772, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_41jpt")
+
+[node name="SoundEffectController" type="Node" parent="Player"]
+script = ExtResource("9_i6cld")
+audio_bus = "Reverb"
+sound_effects = Array[ExtResource("17_gdexg")]([SubResource("Resource_nou5w")])
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
 

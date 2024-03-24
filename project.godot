@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 
 EventBus="*res://scripts/event_bus.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/soundeffectcontroller/plugin.cfg")
+
 [input]
 
 game_lock_mouse={

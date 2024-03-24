@@ -326,7 +326,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.483, 5.17487, -96.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.517, 5.17487, -98.066)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -339,7 +339,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.483, 4.52487, -96.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.517, 4.52487, -98.066)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -538,6 +538,10 @@ text = "It's not a real mall unless they have these coin funnel things."
 [node name="CoinHallway1" parent="InfoAreas/CoinHallway" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0.3, -94)
 text = "There was this hurricane simulator thing. You stand in this chamber and it would blow air at you to simulate a hurricane. I don't think I ever tried this."
+
+[node name="CoinHallway2" parent="InfoAreas/CoinHallway" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0.3, -106.7)
+text = "There was a Lids store somewhere. All I remember is rows and rows of hats along the walls."
 
 [node name="Props" type="Node" parent="."]
 

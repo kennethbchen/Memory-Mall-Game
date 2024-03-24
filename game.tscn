@@ -516,11 +516,11 @@ text = "The board that you look at while sitting down is reflected a couple of t
 [node name="PlaygroundHub" type="Node" parent="InfoAreas"]
 
 [node name="PlaygroundHub1" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -240)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 171.6, 0, -112.6)
 text = "I remember this area always being closed down."
 
 [node name="PlaygroundHub2" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -212)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.6, 0, -94)
 text = "There was this small playground area. It had many food-themed plastic obstacles that kids could run around and climb on, I guess. Either this is in the wrong location or they removed it at some point beacuse I feel like it goes here but I don't really remember seeing it here that much."
 
 [node name="Hub2" type="Node" parent="InfoAreas"]

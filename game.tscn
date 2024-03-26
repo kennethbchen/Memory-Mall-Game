@@ -1377,7 +1377,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.517, 5.17487, -98.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.604, 5.17487, -383.79)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -1390,7 +1390,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.517, 4.52487, -98.066)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 136.604, 4.52487, -383.79)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -2512,7 +2512,6 @@ mesh = SubResource("ArrayMesh_11del")
 
 [node name="OutsideChair3" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
 transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 152.362, 0.1, -269.043)
-mesh = SubResource("ArrayMesh_ordnc")
 
 [node name="OutsideChair6" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
 transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 150.762, 0.1, -270.043)

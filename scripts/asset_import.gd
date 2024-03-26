@@ -33,7 +33,7 @@ func _post_import(scene: Node):
 		var result = obj_scene.pack(node)
 		
 		if result == OK:
-			var error = ResourceSaver.save(obj_scene, filepath, ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
+			var error = ResourceSaver.save(obj_scene, filepath, ResourceSaver.FLAG_CHANGE_PATH | ResourceSaver.FLAG_REPLACE_SUBRESOURCE_PATHS)
 			if error != OK:
 				push_error("An error occurred while saving the scene to disk.")
 				push_error(error)

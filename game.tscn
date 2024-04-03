@@ -1528,6 +1528,10 @@ text = "I remember the area near the Chick Fil-A opening up to a large area. I t
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7761, -1.90735e-06, -95.258)
 text = "I remember a long hallway like this leading to a big store like Dillards? It had glass windows on either side of the walls which may have been stores, but I don't remember."
 
+[node name="SouthHallway4" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7761, -1.90735e-06, -223.258)
+text = "There was also a Macy's, I think. Maybe it was here?"
+
 [node name="SouthHallway3" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.7761, -1.90735e-06, -94.258)
 text = "I know that there's a Dillards somewhere in the mall. Maybe it was here? I don't remember anything about it."

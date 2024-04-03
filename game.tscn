@@ -1486,7 +1486,6 @@ audio_bus = "Reverb"
 sound_effects = Array[ExtResource("17_gdexg")]([SubResource("Resource_nou5w")])
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

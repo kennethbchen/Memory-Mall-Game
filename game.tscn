@@ -95,6 +95,8 @@ script = ExtResource("17_gdexg")
 name = "footstep"
 audio_clips = Array[AudioStream]([ExtResource("11_8najg"), ExtResource("12_aujay"), ExtResource("13_oo85m"), ExtResource("14_2y2jr"), ExtResource("15_t5tkp"), ExtResource("16_xmbxf"), ExtResource("17_nxslt"), ExtResource("18_hxrm2"), ExtResource("19_v8bxj"), ExtResource("20_anmms"), ExtResource("21_h3rbi"), ExtResource("22_b8y7m"), ExtResource("23_kf1a4"), ExtResource("24_osij8"), ExtResource("25_uklqd"), ExtResource("26_8t0dr"), ExtResource("27_3ounl"), ExtResource("28_kmsyd")])
 
+[sub_resource type="BoxMesh" id="BoxMesh_xf85q"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryjr6"]
 resource_name = "TrashCan"
 cull_mode = 2
@@ -1378,8 +1380,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_77oj4")
 
-[sub_resource type="BoxMesh" id="BoxMesh_xf85q"]
-
 [node name="Game" type="Node3D"]
 
 [node name="FootstepTest" type="AudioStreamPlayer" parent="."]
@@ -1486,6 +1486,11 @@ audio_bus = "Reverb"
 sound_effects = Array[ExtResource("17_gdexg")]([SubResource("Resource_nou5w")])
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mesh = SubResource("BoxMesh_xf85q")
 
 [node name="InfoAreas" type="Node" parent="."]
 
@@ -1525,7 +1530,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.223856, -1.90735e-06, -51.2
 text = "I remember the area near the Chick Fil-A opening up to a large area. I think that it opens up to what I'm calling the second hub area."
 
 [node name="SouthHallway2" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7761, -1.90735e-06, -95.258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7761, -1.90735e-06, -93.258)
 text = "I remember a long hallway like this leading to a big store like Dillards? It had glass windows on either side of the walls which may have been stores, but I don't remember."
 
 [node name="SouthHallway4" parent="InfoAreas" instance=ExtResource("5_dp3gq")]
@@ -1675,7 +1680,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -123)
 text = "It's not a real mall unless they have these coin funnel things."
 
 [node name="Hub2_3" parent="InfoAreas/Hub2" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6077, -4.76837e-07, -77.6348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6077, -4.76837e-07, -75.6348)
 text = "There were smaller stalls like these that people could rent. I remember getting an RC helicopter from one of these (I barely used it)."
 
 [node name="CoinHallway" type="Node" parent="InfoAreas"]
@@ -2400,6 +2405,9 @@ mesh = SubResource("ArrayMesh_5oh14")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, -229)
 mesh = SubResource("ArrayMesh_5oh14")
 
+[node name="Map Display2" parent="Props/FoodCourt Props" instance=ExtResource("21_oyfff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
+
 [node name="FoodCourtHallway Props" type="Node" parent="Props"]
 
 [node name="CFA Props" type="Node" parent="Props/FoodCourtHallway Props"]
@@ -2559,43 +2567,87 @@ mesh = SubResource("ArrayMesh_q2bik")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -126)
 mesh = SubResource("ArrayMesh_pllk8")
 
+[node name="CoinFunnel2" parent="Props/Hub1Props" instance=ExtResource("27_4lmcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, -94)
+mesh = SubResource("ArrayMesh_pllk8")
+
+[node name="CoinFunnel3" parent="Props/Hub1Props" instance=ExtResource("27_4lmcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -94)
+mesh = SubResource("ArrayMesh_pllk8")
+
+[node name="Fountain" parent="Props/Hub1Props" instance=ExtResource("67_33bek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -225)
+
+[node name="TrashCan5" parent="Props/Hub1Props" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -209)
+
+[node name="TrashCan6" parent="Props/Hub1Props" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -241)
+
+[node name="TrashCan3" parent="Props/Hub1Props" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -187)
+
 [node name="Hub2Props" type="Node" parent="Props"]
 
 [node name="MerchantStand" parent="Props/Hub2Props" instance=ExtResource("63_m4j7g")]
-transform = Transform3D(0.679454, 0, 0.733718, 0, 1, 0, -0.733718, 0, 0.679454, 10.3352, 0, -79.0211)
+transform = Transform3D(0.679454, 0, 0.733718, 0, 1, 0, -0.733718, 0, 0.679454, 12.3352, 0, -77.0211)
 
 [node name="MerchantShelf" parent="Props/Hub2Props" instance=ExtResource("64_ywnyf")]
-transform = Transform3D(0.964128, 0, 0.265438, 0, 1, 0, -0.265438, 0, 0.964128, 14.5921, 4.76837e-07, -82.1272)
+transform = Transform3D(0.964128, 0, 0.265438, 0, 1, 0, -0.265438, 0, 0.964128, 16.5921, 4.76837e-07, -80.1272)
 
 [node name="MerchantStand2" parent="Props/Hub2Props" instance=ExtResource("63_m4j7g")]
-transform = Transform3D(0.753529, 0, -0.657415, 0, 1, 0, 0.657415, 0, 0.753529, -14.9126, 4.76837e-07, -82.5211)
+transform = Transform3D(0.753529, 0, -0.657415, 0, 1, 0, 0.657415, 0, 0.753529, -16.9126, 4.76837e-07, -81.5211)
 
 [node name="MerchantShelf2" parent="Props/Hub2Props" instance=ExtResource("64_ywnyf")]
-transform = Transform3D(-0.282425, 0, -0.959289, 0, 1, 0, 0.959289, 0, -0.282425, -10.992, 9.53674e-07, -78.6854)
+transform = Transform3D(-0.282425, 0, -0.959289, 0, 1, 0, 0.959289, 0, -0.282425, -12.992, 9.53674e-07, -77.6854)
 
 [node name="MerchantStand3" parent="Props/Hub2Props" instance=ExtResource("63_m4j7g")]
-transform = Transform3D(-0.644404, 0, -0.764685, 0, 1, 0, 0.764685, 0, -0.644404, -10.832, 9.53674e-07, -109.743)
+transform = Transform3D(-0.644404, 0, -0.764685, 0, 1, 0, 0.764685, 0, -0.644404, -12.832, 9.53674e-07, -109.743)
 
 [node name="MerchantShelf3" parent="Props/Hub2Props" instance=ExtResource("64_ywnyf")]
-transform = Transform3D(-0.943043, 0, -0.332671, 0, 1, 0, 0.332671, 0, -0.943043, -14.7933, 1.43051e-06, -105.221)
+transform = Transform3D(-0.943043, 0, -0.332671, 0, 1, 0, 0.332671, 0, -0.943043, -16.7933, 1.43051e-06, -105.221)
 
 [node name="MerchantStand4" parent="Props/Hub2Props" instance=ExtResource("63_m4j7g")]
-transform = Transform3D(-0.855708, 0, 0.517459, 0, 1, 0, -0.517459, 0, -0.855708, 15.5965, 9.53674e-07, -104.421)
+transform = Transform3D(-0.855708, 0, 0.517459, 0, 1, 0, -0.517459, 0, -0.855708, 15.5965, 9.53674e-07, -106.421)
 
 [node name="MerchantShelf4" parent="Props/Hub2Props" instance=ExtResource("64_ywnyf")]
-transform = Transform3D(-0.388095, 0, 0.921619, 0, 1, 0, -0.921619, 0, -0.388095, 11.2048, 2.38419e-06, -108.605)
+transform = Transform3D(-0.388095, 0, 0.921619, 0, 1, 0, -0.921619, 0, -0.388095, 11.2048, 2.38419e-06, -110.605)
 
 [node name="CashRegister" parent="Props/Hub2Props" instance=ExtResource("12_1axcq")]
-transform = Transform3D(0.75535, 0, -0.655321, 0, 1, 0, 0.655321, 0, 0.75535, 16.5068, 0.967455, -104.027)
+transform = Transform3D(0.75535, 0, -0.655321, 0, 1, 0, 0.655321, 0, 0.75535, 16.5068, 0.967455, -106.027)
 
 [node name="CashRegister2" parent="Props/Hub2Props" instance=ExtResource("12_1axcq")]
-transform = Transform3D(-0.559916, 0, -0.828549, 0, 1, 0, 0.828549, 0, -0.559916, 9.59515, 0.967454, -78.2913)
+transform = Transform3D(-0.559916, 0, -0.828549, 0, 1, 0, 0.828549, 0, -0.559916, 11.5951, 0.967454, -76.2913)
 
 [node name="CashRegister3" parent="Props/Hub2Props" instance=ExtResource("12_1axcq")]
-transform = Transform3D(-0.739443, 0, 0.673219, 0, 1, 0, -0.673219, 0, -0.739443, -14.0131, 0.967454, -82.0383)
+transform = Transform3D(-0.739443, 0, 0.673219, 0, 1, 0, -0.673219, 0, -0.739443, -16.0131, 0.967454, -81.0383)
 
 [node name="CashRegister4" parent="Props/Hub2Props" instance=ExtResource("12_1axcq")]
-transform = Transform3D(0.571201, 0, 0.82081, 0, 1, 0, -0.82081, 0, 0.571201, -11.0352, 0.967454, -108.951)
+transform = Transform3D(0.571201, 0, 0.82081, 0, 1, 0, -0.82081, 0, 0.571201, -13.0352, 0.967454, -108.951)
+
+[node name="PalmTree" parent="Props/Hub2Props" instance=ExtResource("66_7fotw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3486, 0, -85.62)
+
+[node name="PalmTree2" parent="Props/Hub2Props" instance=ExtResource("66_7fotw")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8.45141, 0, -85.62)
+
+[node name="PalmTree3" parent="Props/Hub2Props" instance=ExtResource("66_7fotw")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 8.3486, 0, -102.42)
+
+[node name="PalmTree4" parent="Props/Hub2Props" instance=ExtResource("66_7fotw")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -8.45141, 0, -102.42)
+
+[node name="Fountain2" parent="Props/Hub2Props" instance=ExtResource("67_33bek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -94)
+
+[node name="TrashCan" parent="Props/Hub2Props" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, -78)
+
+[node name="TrashCan4" parent="Props/Hub2Props" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -111)
+
+[node name="TrashCan2" parent="Props/Hub2Props" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0, -81)
 
 [node name="SearsProps" type="Node" parent="Props"]
 
@@ -2646,50 +2698,71 @@ mesh = SubResource("ArrayMesh_ordnc")
 transform = Transform3D(1, 0, -2.68221e-07, 0, 1, 0, 2.68221e-07, 0, 1, 151.905, 0.1, -271.77)
 mesh = SubResource("ArrayMesh_ordnc")
 
+[node name="OutsideTable3" parent="Props/SearsProps" instance=ExtResource("30_4nxvu")]
+transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 160.291, 0, -271.754)
+mesh = SubResource("ArrayMesh_11del")
+
+[node name="OutsideChair10" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(-0.5, 0, 0.866026, 0, 1, 0, -0.866026, 0, -0.5, 159.052, 0.1, -271.185)
+
+[node name="OutsideChair11" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(-0.866026, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866026, 160.894, 0.1, -270.599)
+mesh = SubResource("ArrayMesh_ordnc")
+
+[node name="OutsideChair12" parent="Props/SearsProps" instance=ExtResource("31_mtxll")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 161.568, 0.1, -272.332)
+mesh = SubResource("ArrayMesh_ordnc")
+
 [node name="FoldingCanopy" parent="Props/SearsProps" instance=ExtResource("28_53kup")]
 transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 159, 0.2, -273)
 
 [node name="CoinHallwayProps" type="Node" parent="Props"]
 
+[node name="Bench" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 80, 0, -94)
+
+[node name="Bench2" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 78.6, 0, -94)
+
+[node name="Bench5" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 64, 0, -94)
+
+[node name="Bench6" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 62.6, 0, -94)
+
+[node name="Bench3" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 92, 0, -94)
+
+[node name="Bench4" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 90.6, 0, -94)
+
+[node name="Bench7" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 110, 0, -94)
+
+[node name="Bench8" parent="Props/CoinHallwayProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 108.6, 0, -94)
+
+[node name="CoinFunnel4" parent="Props/CoinHallwayProps" instance=ExtResource("27_4lmcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 0, -94)
+mesh = SubResource("ArrayMesh_pllk8")
+
 [node name="ClawMachine" parent="Props/CoinHallwayProps" instance=ExtResource("36_re1ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103, 0.1, -94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 0.1, -94)
 
 [node name="ClawMachine2" parent="Props/CoinHallwayProps" instance=ExtResource("36_re1ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 0.1, -94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99, 0.1, -94)
 mesh = SubResource("ArrayMesh_bsx3l")
 
 [node name="ClawMachine3" parent="Props/CoinHallwayProps" instance=ExtResource("36_re1ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 0.1, -94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 0.1, -94)
 mesh = SubResource("ArrayMesh_bsx3l")
 
+[node name="RockingHorse2" parent="Props/CoinHallwayProps" instance=ExtResource("65_nhysm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85, 0, -94)
+
 [node name="ClawMachine4" parent="Props/CoinHallwayProps" instance=ExtResource("36_re1ou")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 0.1, -94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 0.1, -94)
 mesh = SubResource("ArrayMesh_bsx3l")
 
 [node name="HurricaneSim" parent="Props/CoinHallwayProps" instance=ExtResource("37_tbv34")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 55, 0.2, -94)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-mesh = SubResource("BoxMesh_xf85q")
-
-[node name="RockingHorse2" parent="." instance=ExtResource("65_nhysm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85, 0, -94)
-
-[node name="PalmTree" parent="." instance=ExtResource("66_7fotw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.3486, 0, -85.62)
-
-[node name="PalmTree2" parent="." instance=ExtResource("66_7fotw")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -8.45141, 0, -85.62)
-
-[node name="PalmTree3" parent="." instance=ExtResource("66_7fotw")]
-transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 8.3486, 0, -102.42)
-
-[node name="PalmTree4" parent="." instance=ExtResource("66_7fotw")]
-transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -8.45141, 0, -102.42)
-
-[node name="Fountain" parent="." instance=ExtResource("67_33bek")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -225)
-
-[node name="Fountain2" parent="." instance=ExtResource("67_33bek")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -94)

@@ -1453,7 +1453,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.807, 1.71749, -88.835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.807, 1.71749, -88.835)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -1466,7 +1466,7 @@ y_sensitivity = 0.5
 current = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.807, 1.06749, -88.835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.807, 1.06749, -88.835)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -1616,53 +1616,53 @@ text = "There's another entrance into the mall here. I remember using this one a
 [node name="Lenscraft" type="Node" parent="InfoAreas"]
 
 [node name="Lenscraft1" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152.8, 0, -74.9182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 162.8, 0, -62.9182)
 text = "This was a Lenscrafters. I've had poor eyesight all my life, so I remember coming here often to get new glasses. I think a couple of years ago, they closed or relocated somewhere else."
 
 [node name="Lenscraft9" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 172.8, 0, -74.9182)
-text = "This was a Sunglass Hut. Never went in here."
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 180.8, 0, -62.9182)
+text = "This was a Sunglass Hut. Never went in here on account of always wearing glasses."
 
 [node name="Lenscraft10" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 148.8, 0, -112.918)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 158.8, 0, -122.918)
 text = "This was a Books A Million. I've been in it sometimes."
 
 [node name="Lenscraft11" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 184.8, 0, -93.9182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 195.926, 0, -93.9182)
 text = "This is another one of the \"Big Stores\". I think it was the JC Penny. I don't remember any of it."
 
 [node name="Lenscraft2" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 147.8, 0, -65.9182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 157.8, 0, -53.9182)
 text = "They had these seating areas where you would test out glasses and talk to someone at the store."
 
 [node name="Lenscraft4" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 155.8, 0, -56.9182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 165.8, 0, -44.9182)
 text = "There were rows and rows of different glasses frames on display."
 
 [node name="Lenscraft3" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 145.8, 0, -38.9182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 155.8, 0, -26.9182)
 text = "This area was where they did testing on your eye health. They had the machine that would blow air into your eyes and the one where you would focus on an image of a house."
 
 [node name="Lenscraft6" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 149.8, 0, -31.5182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 159.8, 0, -19.5182)
 text = "This was an office space. I think I only ever saw it once."
 
 [node name="Lenscraft7" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 141.8, 0, -27.5182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 151.8, 0, -15.5182)
 text = "I don't remember seeing the inside of any of these rooms."
 
 [node name="Lenscraft5" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 149.7, 0, -22.5182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 159.7, 0, -10.5182)
 text = "This is where you would do the vision test with the eye doctor to figure out your prescription. I don't think that I've ever been afraid of doing this vision test, unlike how I've heard others talk about it."
 
 [node name="Lenscraft8" parent="InfoAreas/Lenscraft" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 154.7, 0, -20.5182)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 164.7, 0, -8.5182)
 text = "The board that you look at while sitting down is reflected a couple of times in mirrors around the room. Most likely to get the right distance for the test."
 
 [node name="PlaygroundHub" type="Node" parent="InfoAreas"]
 
 [node name="PlaygroundHub1" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 171.6, 0, -112.6)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 181.6, 0, -122.6)
 text = "I remember this area always being closed down."
 
 [node name="PlaygroundHub2" parent="InfoAreas/PlaygroundHub" instance=ExtResource("5_dp3gq")]
@@ -2478,7 +2478,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 
 [node name="Lenscraft Props" type="Node" parent="Props"]
 
 [node name="Table2" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 142, 0, -63)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 152, 0, -51)
 mesh = SubResource("ArrayMesh_m5tbf")
 
 [node name="Chair2" parent="Props/Lenscraft Props/Table2" instance=ExtResource("25_oocf2")]
@@ -2494,7 +2494,7 @@ transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 0.
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Table3" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 142, 0, -71)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 152, 0, -59)
 mesh = SubResource("ArrayMesh_m5tbf")
 
 [node name="Chair2" parent="Props/Lenscraft Props/Table3" instance=ExtResource("25_oocf2")]
@@ -2510,7 +2510,7 @@ transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 0.
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Table4" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 148, 0, -71)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 158, 0, -59)
 mesh = SubResource("ArrayMesh_m5tbf")
 
 [node name="Chair2" parent="Props/Lenscraft Props/Table4" instance=ExtResource("25_oocf2")]
@@ -2526,7 +2526,7 @@ transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 1.
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Table5" parent="Props/Lenscraft Props" instance=ExtResource("25_neuuv")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 148, 0, -63)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 158, 0, -51)
 mesh = SubResource("ArrayMesh_m5tbf")
 
 [node name="Chair4" parent="Props/Lenscraft Props/Table5" instance=ExtResource("25_oocf2")]
@@ -2538,27 +2538,27 @@ transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 0, 1)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Chair2" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.817, 0, -36.0833)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153.817, 0, -24.0833)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Chair6" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 154.817, 0, -30.0833)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 164.817, 0, -18.0833)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Chair7" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 152.217, 0, -30.0833)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 162.217, 0, -18.0833)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Chair3" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.817, 0, -38.0833)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153.817, 0, -26.0833)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Chair4" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 143.817, 0, -40.0833)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153.817, 0, -28.0833)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Chair5" parent="Props/Lenscraft Props" instance=ExtResource("25_oocf2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 156.117, 0, -23.4833)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 166.117, 0, -11.4833)
 mesh = SubResource("ArrayMesh_q2bik")
 
 [node name="Hub1Props" type="Node" parent="Props"]
@@ -2770,10 +2770,22 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 55, 0.
 [node name="PlaygroundHubProps" type="Node" parent="Props"]
 
 [node name="Pot" parent="Props/PlaygroundHubProps" instance=ExtResource("68_yiiob")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182, 0, -80)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192, 0, -68)
 
 [node name="Pot2" parent="Props/PlaygroundHubProps" instance=ExtResource("68_yiiob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182, 0, -108)
 
 [node name="TrashCan" parent="." instance=ExtResource("20_sk58x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138, 0, -108)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148, 0, -108)
+
+[node name="Bench" parent="." instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178, 0, -104)
+
+[node name="Bench2" parent="." instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 178, 0, -84)
+
+[node name="Bench3" parent="." instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 0, -104)
+
+[node name="Bench4" parent="." instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 0, -84)

@@ -1453,7 +1453,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.193, 3.71749, 0.165001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.807, 3.71749, -100.835)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -1467,7 +1467,7 @@ current = true
 metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.193, 3.06749, 0.165001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.807, 3.06749, -100.835)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -1488,7 +1488,6 @@ audio_bus = "Reverb"
 sound_effects = Array[ExtResource("17_gdexg")]([SubResource("Resource_nou5w")])
 
 [node name="level" parent="." instance=ExtResource("5_y5eys")]
-metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0.0999985)
@@ -2778,23 +2777,35 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 56, 0.
 
 [node name="PlaygroundHubProps" type="Node" parent="Props"]
 
+[node name="TrashCan" parent="Props/PlaygroundHubProps" instance=ExtResource("20_sk58x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311, 0, -108)
+
 [node name="Pot" parent="Props/PlaygroundHubProps" instance=ExtResource("68_yiiob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 355, 0, -68)
 
 [node name="Pot2" parent="Props/PlaygroundHubProps" instance=ExtResource("68_yiiob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 355, 0, -108)
 
-[node name="TrashCan" parent="." instance=ExtResource("20_sk58x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311, 0, -108)
-
-[node name="Bench" parent="." instance=ExtResource("19_v07og")]
+[node name="Bench" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 341, 0, -104)
 
-[node name="Bench2" parent="." instance=ExtResource("19_v07og")]
+[node name="Bench2" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 341, 0, -84)
 
-[node name="Bench3" parent="." instance=ExtResource("19_v07og")]
+[node name="Bench3" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338, 0, -104)
 
-[node name="Bench4" parent="." instance=ExtResource("19_v07og")]
+[node name="Bench5" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329, 0, -125)
+
+[node name="Bench6" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 326, 0, -125)
+
+[node name="Bench7" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 317, 0, -125)
+
+[node name="Bench8" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 314, 0, -125)
+
+[node name="Bench4" parent="Props/PlaygroundHubProps" instance=ExtResource("19_v07og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338, 0, -84)

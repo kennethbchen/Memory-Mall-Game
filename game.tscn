@@ -1453,7 +1453,7 @@ shadow_opacity = 0.95
 directional_shadow_max_distance = 400.0
 
 [node name="OrbitCameraController" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.807, 3.71749, -100.835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.807, 3.71749, -100.835)
 script = ExtResource("1_20s52")
 camera_path = NodePath("Camera3D")
 target_path = NodePath("../Player")
@@ -1467,7 +1467,7 @@ current = true
 metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 305.807, 3.06749, -100.835)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.807, 3.06749, -100.835)
 floor_max_angle = 0.872665
 script = ExtResource("3_lntuk")
 camera = NodePath("../OrbitCameraController/Camera3D")
@@ -1674,7 +1674,7 @@ text = "There was this small playground area. It had many food-themed plastic ob
 [node name="Hub2" type="Node" parent="InfoAreas"]
 
 [node name="Hub2_1" parent="InfoAreas/Hub2" instance=ExtResource("5_dp3gq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 254, 0, -94)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -94)
 text = "I remember there being at least one hallway that had a bunch of coin operated things like claw machines and rocking horse things. I also remember it being quite dark for some reason. I'm calling this the \"coin hallway\"."
 
 [node name="Hub2_2" parent="InfoAreas/Hub2" instance=ExtResource("5_dp3gq")]

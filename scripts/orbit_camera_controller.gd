@@ -20,22 +20,15 @@ var target: Node3D
 @export_range(0, 1, 0.1) var x_sensitivity: float = 1
 @export_range(0, 1, 0.1) var y_sensitivity: float = 1
 
-var mouse_locked: bool = false
+func _is_mouse_locked():
+	return Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
 
 func _ready():
 	pass
 
 func _unhandled_input(event: InputEvent):
-	
-	if event.is_action_pressed("game_lock_mouse") and not mouse_locked:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		mouse_locked = true
-	
-	if event.is_action_pressed("game_release_mouse") and mouse_locked:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		mouse_locked = false
 		
-	if event is InputEventMouseMotion and not Engine.is_editor_hint() and mouse_locked:
+	if event is InputEventMouseMotion and not Engine.is_editor_hint() and _is_mouse_locked():
 		
 		# Yaw
 		rotation_degrees.y += -event.relative.x * x_sensitivity

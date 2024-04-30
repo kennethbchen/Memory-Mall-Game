@@ -27,9 +27,16 @@ var relative_input_direction: Vector3:
 
 var running: bool = false
 
+func _is_game_paused():
+	return Input.mouse_mode != Input.MOUSE_MODE_CAPTURED
+
 func _process(delta):
 	
 	input_direction = Vector2.ZERO
+	
+	if _is_game_paused():
+		return
+		
 	if Input.is_action_pressed("game_forward"):
 		input_direction += Vector2(0, 1)
 		

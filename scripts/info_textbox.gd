@@ -8,11 +8,11 @@ extends Control
 var original_position: Vector2 = Vector2.ZERO
 
 func _ready():
+	visible = false
 	
 	EventBus.player_entered_text_info.connect(on_display_text)
 	EventBus.player_exited_text_info.connect(on_hide_text)
 	
-	visible = false
 	original_position = position / get_viewport_rect().size
 	on_hide_text()
 	

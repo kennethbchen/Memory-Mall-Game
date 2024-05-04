@@ -1,8 +1,11 @@
 extends NinePatchRect
 
 
-@export var wiggle_post_process_material: ShaderMaterial
 
+@export var teleport_button_parent: Control
+
+@export_subgroup("Wiggle")
+@export var wiggle_post_process_material: ShaderMaterial
 @export var wiggle_outline_materials: Array[ShaderMaterial]
 
 signal pause_menu_opened()
@@ -11,6 +14,11 @@ signal pause_menu_closed()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide_pause_menu()
+	
+	for node in get_tree().get_nodes_in_group("info_area"):
+		var new_button = Button.new()
+		new_button.text = node.name
+		teleport_button_parent.add_child(new_button)	
 	
 func _unhandled_input(event):
 	
@@ -35,7 +43,6 @@ func on_slider_changed(value: float, name: String):
 		
 		# Slider ranges from 0 to 100
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index(name), remap(value, 0, 100, -30, 0))
-		print(name, " ", AudioServer.get_bus_volume_db(AudioServer.get_bus_index(name)))
 	
 	if name == "Wiggle":
 		
@@ -46,5 +53,3 @@ func on_slider_changed(value: float, name: String):
 		
 		var wiggle_range = remap(value, 0, 100, 0, 0.007)
 		wiggle_post_process_material.set_shader_parameter("wiggle_range", Vector2(wiggle_range, wiggle_range) )
-		
-		print(name, " ", value)

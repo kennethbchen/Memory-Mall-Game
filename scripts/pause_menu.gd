@@ -2,6 +2,7 @@ extends NinePatchRect
 
 
 @export var default_theme: Theme
+@export var player: CharacterBody3D
 
 @export var teleport_button_parent: Control
 
@@ -17,11 +18,20 @@ func _ready():
 	hide_pause_menu()
 	
 	for node in get_tree().get_nodes_in_group("info_area"):
+		
+		# Create new button for pause menu
 		var new_button = Button.new()
 		new_button.text = node.name
 		teleport_button_parent.add_child(new_button)
 		new_button.theme = default_theme
+		
+		var on_press = func():
+			player.teleport_to(node.position + Vector3(0, 0.1, 0))
+			hide_pause_menu()
 
+		new_button.pressed.connect(on_press)
+		
+		# Make info area mark its corresponding button as read
 		node.activated.connect(_set_teleport_button_read.bind(new_button))
 	
 func _unhandled_input(event):

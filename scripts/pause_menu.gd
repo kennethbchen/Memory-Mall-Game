@@ -1,6 +1,7 @@
 extends NinePatchRect
 
 
+@export var default_theme: Theme
 
 @export var teleport_button_parent: Control
 
@@ -18,7 +19,10 @@ func _ready():
 	for node in get_tree().get_nodes_in_group("info_area"):
 		var new_button = Button.new()
 		new_button.text = node.name
-		teleport_button_parent.add_child(new_button)	
+		teleport_button_parent.add_child(new_button)
+		new_button.theme = default_theme
+
+		node.activated.connect(_set_teleport_button_read.bind(new_button))
 	
 func _unhandled_input(event):
 	
@@ -53,3 +57,6 @@ func on_slider_changed(value: float, name: String):
 		
 		var wiggle_range = remap(value, 0, 100, 0, 0.007)
 		wiggle_post_process_material.set_shader_parameter("wiggle_range", Vector2(wiggle_range, wiggle_range) )
+
+func _set_teleport_button_read(button: Button):
+	button.theme_type_variation = "ButtonRead"

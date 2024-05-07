@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://w30ld6taacnq" path="res://materials/info_halo_material.tres" id="2_sxagr"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_erv7l"]
-height = 1.0
+height = 0.210589
 radius = 1.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8i827"]
@@ -22,8 +22,7 @@ cap_bottom = false
 script = ExtResource("1_sb1nm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0425999, 0)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00175063, 0)
 shape = SubResource("CylinderShape3D_erv7l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

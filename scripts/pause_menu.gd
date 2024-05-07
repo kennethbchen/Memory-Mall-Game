@@ -26,7 +26,9 @@ func _ready():
 		new_button.theme = default_theme
 		
 		var on_press = func():
-			player.teleport_to(node.position + Vector3(0, 0.1, 0))
+			# Add extra height to prevent player from being in two info areas at the same time
+			# which would break the info text box
+			player.teleport_to(node.position + Vector3(0, 1.1, 0))
 			hide_pause_menu()
 
 		new_button.pressed.connect(on_press)

@@ -5,6 +5,8 @@ extends Node
 
 @export var footstep_interval_sec: float = 0.5
 
+@export var fast_footstep_interval_sec: float = 0.25
+
 @export var sfx_controller: SoundEffectController
 
 var player: Player
@@ -20,6 +22,7 @@ func _ready():
 	add_child(footstep_timer)
 	
 	footstep_timer.wait_time = footstep_interval_sec
+	footstep_timer.one_shot = true
 	footstep_timer.timeout.connect(_on_footstep_timer_timeout)
 	footstep_timer.stop()
 
@@ -35,9 +38,10 @@ func _process(delta):
 
 func _on_footstep_timer_timeout():
 	
-	if footstep_timer.wait_time != footstep_interval_sec:
-		footstep_timer.start(footstep_interval_sec)
-		
+	var next_footstep_time = fast_footstep_interval_sec if player.running else footstep_interval_sec
+
+	footstep_timer.start(next_footstep_time)
+	
 	sfx_controller.play("footstep")
 
 

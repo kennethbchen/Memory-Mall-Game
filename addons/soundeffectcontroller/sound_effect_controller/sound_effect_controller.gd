@@ -8,7 +8,9 @@ class_name SoundEffectController
 
 @export var sound_effects: Array[SoundEffect]
 
-var audio_players: Array[AudioStreamPlayer] = []
+@export var max_polyphony: int = 1
+
+var audio_player: AudioStreamPlayer
 
 # Map from sound effect name to its index in sound_effects array
 var effect_map: Dictionary
@@ -18,7 +20,7 @@ var last_played_map: Dictionary
 
 var rand: RandomNumberGenerator
 
-signal players_finished()
+signal player_finished()
 
 func _ready():
 	
@@ -35,12 +37,13 @@ func _ready():
 		
 	# Create AudioStreamPlayers
 	for _i in range(0, num_players):
-		var player = AudioStreamPlayer.new()
-		player.bus = audio_bus
-		player.finished.connect(_on_player_done)
-		audio_players.append(player)
+		audio_player = AudioStreamPlayer.new()
+		audio_player.max_polyphony = max_polyphony
+		audio_player.bus = audio_bus
+		audio_player.finished.connect(_on_player_done)
+
 		
-		add_child(player)
+		add_child(audio_player)
 
 func _has_effect(effect_name: String):
 	return effect_map.has(effect_name)
@@ -51,14 +54,10 @@ func _get_effect(effect_name: String):
 
 func _try_play_sound(audio: AudioStream):
 	
-	for player in audio_players:
-		if not player.playing:
-			player.stream = audio
-			player.play()
-			return
+	audio_player.stream = audio
+	audio_player.play()
 
 func play(name: String) -> void:
-	
 	if not _has_effect(name):
 		push_warning("SoundEffectController has no effect named ", name)
 		return
@@ -71,7 +70,6 @@ func play(name: String) -> void:
 		_try_play_sound(clips[0])
 		return
 		
-	
 	var index = rand.randi_range(0, clips.size() - 1)
 	
 	# Avoid playing the same clip twice
@@ -86,19 +84,15 @@ func play_one_shot(sound):
 	_try_play_sound(sound)
 
 func is_playing() -> bool:
-	for player in audio_players:
-		if player.playing:
-			return true
 	
-	return false
+	return audio_player.playing
 
 func _on_player_done() -> void:
 	
-	for player in audio_players:
-		if player.playing:
-			return
+	if audio_player.playing:
+		return
 	
-	players_finished.emit()
+	player_finished.emit()
 
 func _on_sound_requested(name: String):
 	play(name)

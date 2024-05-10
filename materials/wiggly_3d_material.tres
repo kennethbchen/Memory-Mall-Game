@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://blivwn8g37ube"]
+
+[ext_resource type="Shader" path="res://shaders/wiggly_3d.gdshader" id="1_n3vsl"]
+[ext_resource type="Texture2D" uid="uid://bvwtkeohgtq80" path="res://textures/arrow.png" id="2_3m65a"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_n3vsl")
+shader_parameter/wiggle_speed = 1.0
+shader_parameter/wiggle_period = Vector2(11, 11)
+shader_parameter/wiggle_range = Vector2(0.007, 0.007)
+shader_parameter/noise_strength = 0.5
+shader_parameter/IMAGE_TEXTURE = ExtResource("2_3m65a")

@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://orog4etuspw7"]
+[gd_scene load_steps=7 format=3 uid="uid://orog4etuspw7"]
 
 [ext_resource type="Script" path="res://scripts/info_area.gd" id="1_sb1nm"]
 [ext_resource type="Material" uid="uid://w30ld6taacnq" path="res://materials/info_halo_material.tres" id="2_sxagr"]
+[ext_resource type="Material" uid="uid://blivwn8g37ube" path="res://materials/wiggly_3d_material.tres" id="3_31rhr"]
+[ext_resource type="Texture2D" uid="uid://bvwtkeohgtq80" path="res://textures/arrow.png" id="4_j5lua"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_erv7l"]
 height = 0.210589
@@ -29,3 +31,8 @@ shape = SubResource("CylinderShape3D_erv7l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.670127, 0)
 cast_shadow = 0
 mesh = SubResource("CylinderMesh_8i827")
+
+[node name="Arrow" type="Sprite3D" parent="."]
+transform = Transform3D(-0.235, 3.5484e-08, 1.55106e-15, 0, -1.02722e-08, 0.235, 3.5484e-08, 0.235, 1.02722e-08, 0, 0.163127, 0)
+material_override = ExtResource("3_31rhr")
+texture = ExtResource("4_j5lua")

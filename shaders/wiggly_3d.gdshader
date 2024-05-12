@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode unshaded;
+
 
 uniform float wiggle_speed = 1;
 uniform vec2 wiggle_period = vec2(11.0);

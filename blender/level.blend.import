@@ -55,6 +55,10 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://materials/wiggle_outline_material_3.tres"
 },
+"TextMaterial": {
+"use_external/enabled": true,
+"use_external/path": "res://materials/text_material.tres"
+},
 "WallMaterial": {
 "use_external/enabled": true,
 "use_external/path": "res://materials/wall_material.tres"

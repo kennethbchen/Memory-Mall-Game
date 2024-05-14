@@ -38,6 +38,14 @@ func _ready():
 	
 func _unhandled_input(event):
 	
+	# Mouse locking related stuff shouldn't really go here, but I'm putting it here.
+	if event.is_action_pressed("game_lock_mouse") and not visible:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
+	if event.is_action_pressed("game_release_mouse") and not visible:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+		
 	if event.is_action_pressed("game_pause") and not visible:
 		show_pause_menu()
 		
